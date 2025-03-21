@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build:test": "env APP_ENV=development next build",
+    "build:prod": "env APP_ENV=production next build",
+    "start:test": "env APP_ENV=development next start",
+    "start:prod": "env APP_ENV=production next start",
     "lint": "next lint"
   },
   "dependencies": {
