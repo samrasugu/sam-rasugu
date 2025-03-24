@@ -4,12 +4,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --off-white: #ece7e1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--montserrat-sans);
+
+  --color-primary-background: var(--off-white);
 }
 
 @media (prefers-color-scheme: dark) {
