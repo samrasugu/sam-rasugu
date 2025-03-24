@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserratSans.variable}  antialiased`}>
+      <body className={`${montserratSans.className}  antialiased`}>
         {children}
       </body>
     </html>
