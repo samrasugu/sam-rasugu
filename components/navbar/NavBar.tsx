@@ -14,10 +14,10 @@ export default function NavBar() {
         </Link>
 
         <div className="hidden md:flex flex-row justify-between items-center text-center gap-8">
-          <Link href="/">
+          <Link href="/about">
             <p
               className={` ${
-                pathname === "/" ? "text-orange-700" : "text-black"
+                pathname === "/about" ? "text-orange-700" : "text-black"
               }`}
             >
               About

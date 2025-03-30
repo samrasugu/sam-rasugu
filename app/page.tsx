@@ -17,7 +17,7 @@ export default function Home() {
           </p>
           <p className="text-base text-black">
             For my work history, check out my{" "}
-            <a href="" className="underline" download={true}>
+            <a href="" className="underline">
               resume
             </a>{" "}
             or{" "}
