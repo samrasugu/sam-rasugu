@@ -24,7 +24,7 @@ export default function Footer() {
           <FiGithub className="text-black" size={20} />
         </a>
         <a
-          href="mailto:https:mokuasamr@gmail.com"
+          href="mailto:mokuasamr@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
