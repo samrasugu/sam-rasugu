@@ -41,15 +41,6 @@ export default function NavBar() {
               Thoughts
             </p>
           </Link>
-          <Link href="/">
-            <p
-              className={` ${
-                pathname === "/" ? "text-orange-700" : "text-black"
-              }`}
-            >
-              Contact
-            </p>
-          </Link>
         </div>
       </div>
     </div>
