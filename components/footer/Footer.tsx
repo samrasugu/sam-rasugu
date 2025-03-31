@@ -4,7 +4,7 @@ import { LuLinkedin, LuMail } from "react-icons/lu";
 
 export default function Footer() {
   return (
-    <div className="flex flex-row justify-between bg-primary-background py-6 px-4 md:px-10 lg:px-20 xl:px-40">
+    <div className="flex flex-row justify-between bg-primary-background py-6 px-4 md:px-10 lg:px-20 xl:px-40 border-t border-t-black">
       <p className="text-black text-xs">
         © 2025 Sam Rasugu. All rights reserved.
       </p>
