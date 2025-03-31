@@ -83,7 +83,7 @@ const ExperienceSection: React.FC = () => {
                   : "md:ml-auto md:pl-12"
               }`}
             >
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex flex-col bg-primary-background p-6 rounded-lg shadow-md items-start">
                 <h3 className="text-xl font-bold text-black/70">
                   {exp.title} @
                   <a

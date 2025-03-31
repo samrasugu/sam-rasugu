@@ -2,13 +2,30 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function NavBar() {
   const pathname = usePathname();
+
+  const [hasScrollShadow, setHasScrollShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrollShadow(window.pageYOffset > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="sticky top-0 z-50">
-      <div className="flex flex-row justify-between items-center text-center bg-primary-background py-6 px-4 md:px-10 lg:px-20 xl:px-40 z-50 w-full top-0">
+      <div
+        className={`flex flex-row justify-between items-center text-center bg-primary-background py-6 px-4 md:px-10 lg:px-20 xl:px-40 z-50 w-full top-0 ${
+          hasScrollShadow ? "shadow-xs" : ""
+        }`}
+      >
         <Link href="/">
           <p className="text-2xl font-bold text-black">Sam Rasugu</p>
         </Link>

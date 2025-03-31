@@ -71,7 +71,7 @@ const EducationSection: React.FC = () => {
                   : "md:ml-auto md:pl-12"
               }`}
             >
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex flex-col bg-primary-background p-6 rounded-lg shadow-md items-start text-start">
                 <h3 className="text-xl font-bold text-black/70">
                   {edu.level} in {edu.course} @
                   <a
@@ -83,6 +83,9 @@ const EducationSection: React.FC = () => {
                 </h3>
                 <p className="text-gray-600 mb-2">
                   {edu.period} | {edu.location}
+                </p>
+                <p className="text-gray-600 mb-2">
+                  <span className="font-bold text-black">Grade:</span> {edu.credits}
                 </p>
                 <p className="text-gray-800 text-left text-base">
                   <span className="font-bold">Relevant coursework:</span>{" "}
