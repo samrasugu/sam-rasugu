@@ -7,7 +7,7 @@ import SkillsSection from "@/components/about/SkillsSection";
 export default function AboutPage() {
   return (
     <UIWrapper>
-      <div className="flex flex-col px-4 md:px-10 lg:px-20 xl:px-40 bg-primary-background">
+      <div className="flex flex-col bg-primary-background">
         <ExperienceSection />
         <SkillsSection />
         <EducationSection />
