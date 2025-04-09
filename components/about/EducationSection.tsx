@@ -28,67 +28,42 @@ const EducationSection: React.FC = () => {
 
   return (
     <div className="py-12 bg-primary-background">
-      <h1 className="text-5xl font-bold text-center mb-12 text-black">
+      <h1 className="text-3xl font-bold text-center mb-12 text-white">
         Education
       </h1>
 
-      <div className="relative">
+      <div className="relative container mx-auto">
         {/* Vertical Timeline Line */}
-        <div className="absolute left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-white"></div>
+        <div className="hidden md:absolute md:flex left-6 top-0 h-full w-1 bg-white"></div>
 
         {education.map((edu, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-start mb-16 relative ${
-              index % 2 === 0 ? "md:flex-row-reverse" : ""
-            }`}
-          >
+          <div key={index} className="flex flex-row items-start mb-16 relative">
             {/* Timeline Circle */}
-            <div className="absolute left-1/2 transform md:-translate-x-1/2 w-10 h-10 rounded-full bg-white border-4 border-black z-10 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-5 w-5 text-black"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 7v9l10 5 10-5V7"></path>
-                <path d="M2 16l10 5 10-5"></path>
-                <path d="M12 12v9"></path>
-                <path d="M20 16V9"></path>
-              </svg>
+            <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-white border-4 border-black z-10 md:flex items-center justify-center">
+              <div className="w-6 h-6 rounded-full bg-black"></div>
             </div>
 
             {/* Content */}
-            <div
-              className={`w-full md:w-5/12 md:ml-0 ${
-                index % 2 === 0
-                  ? "md:mr-auto md:text-right md:pr-12"
-                  : "md:ml-auto md:pl-12"
-              }`}
-            >
-              <div className="flex flex-col bg-primary-background p-6 rounded-lg shadow-md items-start text-start">
-                <h3 className="text-xl font-bold text-black/70">
+            <div className="md:ml-16 w-full">
+              <div className="flex flex-col bg-primary-background p-4 rounded-lg items-start border border-gray-300/10">
+                <h3 className="text-xl font-semibold text-gray-300">
                   {edu.level} in {edu.course} @
                   <a
                     href={edu.schoolUrl}
-                    className="text-black hover:underline ml-1"
+                    className="text-white hover:underline ml-1 font-bold"
                   >
                     {edu.school}
                   </a>
                 </h3>
-                <p className="text-gray-600 mb-2">
+                <p className="text-gray-400 mb-2">
                   {edu.period} | {edu.location}
                 </p>
-                <p className="text-gray-600 mb-2">
-                  <span className="font-bold text-black">Grade:</span> {edu.credits}
+                <p className="text-gray-300 mb-2">
+                  <span className="font-bold text-white">Grade:</span>{" "}
+                  {edu.credits}
                 </p>
-                <p className="text-gray-800 text-left text-base">
-                  <span className="font-bold">Relevant coursework:</span>{" "}
+                <p className="text-gray-300 text-left text-base">
+                  <span className="font-bold text-white">Relevant coursework:</span>{" "}
                   {edu.description}
                 </p>
               </div>
