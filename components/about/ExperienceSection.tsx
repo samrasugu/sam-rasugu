@@ -1,3 +1,4 @@
+import { BriefcaseBusiness } from "lucide-react";
 import React from "react";
 
 interface ExperienceItem {
@@ -18,7 +19,7 @@ const ExperienceSection: React.FC = () => {
       period: "April 2024 - Present",
       location: "Manchester, UK - Hybrid",
       description:
-        "As a Software Engineer at MONOS, I contributed to the development of several key products. I played a central role in building the MONOS App, enhancing its guided learning journeys, community-driven discussions, and content delivery system. For MONOS Mankind, I developed features for donation management and relief tracking to support humanitarian causes. In MONOS Markets, I helped create vendor tools and dashboards to manage small Halal businesses and improve public engagement. For the Halal Directory, I built a scalable search engine with verification workflows, enabling users to discover verified Halal businesses globally.",
+        "As a Software Engineer at MONOS, I contribute to the development of several key products. I play a central role in building the MONOS App, enhancing its guided learning journeys, community-driven discussions, and content delivery system. For MONOS Mankind, I developed features for donation management and relief tracking to support humanitarian causes. In MONOS Markets, I helped create vendor tools and dashboards to manage small Halal businesses and improve public engagement. For the Halal Directory, I built a scalable search engine with verification workflows, enabling users to discover verified Halal businesses globally.",
     },
     {
       title: "Software Engineer",
@@ -42,61 +43,40 @@ const ExperienceSection: React.FC = () => {
 
   return (
     <div className="py-12 bg-primary-background">
-      <h1 className="text-5xl font-bold text-center mb-12 text-black">
-        Experience
-      </h1>
+      <div className="flex flex-row gap-4 items-center">
+        <BriefcaseBusiness size={34} />
+        <h1 className="text-3xl font-bold text-left my-12 text-white">
+          Experience
+        </h1>
+      </div>
 
-      <div className="relative">
-        {/* Vertical Timeline Line */}
-        <div className="absolute left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-white"></div>
+      <div className="relative container mx-auto">
+        {/* vertical timeline line */}
+        <div className="hidden md:absolute md:flex left-6 top-0 h-full w-1 bg-white"></div>
 
         {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-start mb-16 relative ${
-              index % 2 === 0 ? "md:flex-row-reverse" : ""
-            }`}
-          >
-            {/* Timeline Circle */}
-            <div className="absolute left-1/2 transform md:-translate-x-1/2 w-10 h-10 rounded-full bg-white border-4 border-black z-10 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-black"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
+          <div key={index} className="flex flex-row items-start mb-16 relative">
+            {/* timeline circle*/}
+            <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-white border-4 border-black z-10 md:flex items-center justify-center">
+              <div className="w-6 h-6 rounded-full bg-black"></div>
             </div>
 
-            {/* Content */}
-            <div
-              className={`w-full md:w-5/12 md:ml-0 ${
-                index % 2 === 0
-                  ? "md:mr-auto md:text-right md:pr-12"
-                  : "md:ml-auto md:pl-12"
-              }`}
-            >
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-black/70">
+            {/* content */}
+            <div className="md:ml-16 w-full">
+              <div className="flex flex-col bg-primary-background p-4 rounded-lg items-start border border-gray-300/10">
+                <h3 className="text-xl font-semibold text-gray-300">
                   {exp.title} @
                   <a
                     href={exp.companyUrl}
-                    className="text-black hover:underline ml-1"
+                    className="text-white hover:underline ml-1 font-bold"
                   >
                     {exp.company}
                   </a>
                 </h3>
-                <p className="text-gray-600 mb-2">
+                <p className="text-gray-400 mb-2">
                   {exp.period} | {exp.location}
                 </p>
-                <p className="text-gray-800 text-left">{exp.description}</p>
+                <p className="text-gray-300 text-left">{exp.description}</p>
               </div>
             </div>
           </div>
