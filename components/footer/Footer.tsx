@@ -1,6 +1,6 @@
 import React from "react";
-import { FiGithub } from "react-icons/fi";
-import { LuLinkedin, LuMail } from "react-icons/lu";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
 
 export default function Footer() {
   return (
@@ -11,17 +11,17 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <LuLinkedin className="text-gray-text" size={20} />
+          <FaLinkedin className="text-gray-text hover:text-white" size={24} />
         </a>
         <a
           href="https://www.github.com/samrasugu/"
           target="_blank"
           rel="noreferrer"
         >
-          <FiGithub className="text-gray-text" size={20} />
+          <FaGithub className="text-gray-text hover:text-white" size={24} />
         </a>
         <a href="mailto:mokuasamr@gmail.com" target="_blank" rel="noreferrer">
-          <LuMail className="text-gray-text" size={20} />
+          <LuMail className="text-gray-text hover:text-white" size={24} />
         </a>
       </div>
 

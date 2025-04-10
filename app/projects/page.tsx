@@ -9,9 +9,9 @@ export default function ProjectsPage() {
     {
       title: "NutriMate",
       description:
-        "NutriMate is an intelligent nutrition recommendation system I developed that leverages Retrieval Augmented Generation (RAG) to deliver personalized dietary guidance. The system combines a comprehensive nutrition knowledge base with advanced natural language processing capabilities to provide tailored recommendations based on users' unique health profiles, preferences, and goals.",
-      githublink: "https://github.com/samrasugu/sam-rasugu/pulls",
-      link: "https://example.com/project1",
+        "NutriMate is an intelligent nutrition chat system that leverages Retrieval Augmented Generation (RAG) to deliver personalized dietary guidance. The system combines a comprehensive nutrition knowledge base with advanced natural language processing capabilities to provide tailored recommendations based on users' unique health profiles, preferences, and goals.",
+      githublink: "https://github.com/samrasugu/sam-rasugu",
+      link: "https://github.com/samrasugu/sam-rasugu",
       image: "/images/NutriMate.png",
       techstack: [
         "Python",
@@ -25,20 +25,87 @@ export default function ProjectsPage() {
       ],
     },
     {
-      title: "Project 2",
-      description: "Description of Project 2",
+      title: "Halal Directory",
+      description:
+        "A search engine for discovering and marketing Halal businesses enhancing their visibility and accessibility.",
       githublink: "",
-      link: "https://example.com/project2",
-      image: "/images/nutrimate_2.jpg",
-      techstack: ["React", "Node.js", "Express", "MongoDB"],
+      link: "https://monoshalaldirectory.com",
+      image: "/images/halal_directory.png",
+      techstack: [
+        "TypeScript",
+        "Next.JS",
+        "Redux",
+        "Python",
+        "Flask",
+        "AWS Amplify",
+      ],
     },
     {
-      title: "Project 3",
-      description: "Description of Project 2",
+      title: "MONOS App",
+      description:
+        "MONOS is a comprehensive Islamic learning platform offering personalized Quran lessons, AI-powered Q&A, and direct access to religious scholars. The app aims to empower Muslims globally in their spiritual growth through interactive learning and community connection.",
       githublink: "",
-      link: "https://example.com/project2",
-      image: "/images/nutrimate_2.jpg",
-      techstack: ["React", "Node.js", "Express", "MongoDB"],
+      link: "https://play.google.com/store/apps/details?id=ai.monos",
+      image: "/images/monos_app.png",
+      techstack: ["Flutter", "Python", "OpenAI", "PostgreSQL"],
+    },
+    {
+      title: "MONOS Mankind",
+      description:
+        "MONOS Mankind is a humanitarian initiative with sustainable campaigns addressing poverty alleviation, food security, education, emergency relief, and community development—all driven by Islamic values of compassion and service to create lasting positive change in vulnerable communities worldwide.F",
+      githublink: "",
+      link: "https://monosmankind.com",
+      image: "/images/monos_mankind.png",
+      techstack: [
+        "TypeScript",
+        "Next.JS",
+        "Redux",
+        "Python",
+        "Flask",
+        "AWS Amplify",
+      ],
+    },
+    {
+      title: "UoNAfyaApp360°",
+      description:
+        "UoNAfyaApp360 is a health app designed to help users track their health and stay up to date with their medication. It includes features like a mood diary, community groups, and educational content focusing on diet, exercise, and mental health. The app also provides appointment and pill reminders, and clinic notices.",
+      githublink: "",
+      link: "https://play.google.com/store/apps/details?id=com.mycarehub.prohealth360",
+      image: "/images/UoN_360.png",
+      techstack: ["Flutter", "GraphQL", "Firebase", "Python"],
+    },
+    {
+      title: "Vitu Kwa Ground",
+      description:
+        "A mobile app for Vitu Kwa Ground, an initiative building a data platform that aims to connect people, and organizations through user engagement, reporting and analytics.",
+      githublink: "",
+      link: "https://play.google.com/store/apps/details?id=ke.co.reds.app.vkg",
+      image: "/images/VKG_Poster.png",
+      techstack: [
+        "Flutter",
+        "NodeJS",
+        "TypeScript",
+        "MySQL",
+        "Firebase",
+        "Azure",
+      ],
+    },
+    {
+      title: "Agrofi",
+      description:
+        "Agrofi is an application that connects farmers with lenders and suppliers, providing a platform for farmers to access loans, supplies and showcase their products and buyers to find fresh produce.",
+      githublink: "https://github.com/samrasugu/Agrofi",
+      link: "https://play.google.com/store/apps/details?id=farm.agrofi.agrofi",
+      image: "/images/agrofi_photo.jpg",
+      techstack: [
+        "TypeScript",
+        "Flutter",
+        "NodeJS",
+        "Azure",
+        "Firebase",
+        "JavaScript",
+        "MongoDB",
+      ],
     },
   ];
   return (
@@ -61,7 +128,7 @@ export default function ProjectsPage() {
                   <Image
                     src={project.image}
                     alt={`Project ${index + 1}`}
-                    className="rounded-lg object-cover object-center"
+                    className="rounded-lg object-fill object-center w-full"
                     fill={true}
                   />
                 </div>
@@ -83,16 +150,18 @@ export default function ProjectsPage() {
                     ))}
                   </div>
                   <div className="flex flex-row gap-3 items-center">
-                    <a
-                      href={project.githublink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GrGithub
-                        className="text-gray-300 cursor-pointer"
-                        size={24}
-                      />
-                    </a>
+                    {project.githublink !== "" && (
+                      <a
+                        href={project.githublink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <GrGithub
+                          className="text-gray-300 cursor-pointer"
+                          size={24}
+                        />
+                      </a>
+                    )}
 
                     <a
                       href={project.link}
@@ -107,6 +176,14 @@ export default function ProjectsPage() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="py-12">
+          <div className="flex flex-row gap-4 items-center">
+            <Folder size={34} />
+            <h1 className="text-3xl font-bold text-left my-10 text-white">
+              Other projects
+            </h1>
+          </div>
         </div>
       </div>
     </UIWrapper>
