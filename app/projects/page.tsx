@@ -10,8 +10,8 @@ export default function ProjectsPage() {
       title: "NutriMate",
       description:
         "NutriMate is an intelligent nutrition chat system that leverages Retrieval Augmented Generation (RAG) to deliver personalized dietary guidance. The system combines a comprehensive nutrition knowledge base with advanced natural language processing capabilities to provide tailored recommendations based on users' unique health profiles, preferences, and goals.",
-      githublink: "https://github.com/samrasugu/sam-rasugu",
-      link: "https://github.com/samrasugu/sam-rasugu",
+      githublink: "https://github.com/samrasugu/nutrimate",
+      link: "https://github.com/samrasugu/nutrimate",
       image: "/images/NutriMate.png",
       techstack: [
         "Python",
