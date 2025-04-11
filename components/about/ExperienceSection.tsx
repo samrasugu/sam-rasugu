@@ -42,8 +42,8 @@ const ExperienceSection: React.FC = () => {
   ];
 
   return (
-    <div className="py-12 bg-primary-background">
-      <div className="flex flex-row gap-4 items-center">
+    <div className="pb-12 bg-primary-background">
+      <div className="flex flex-row gap-7 items-center">
         <BriefcaseBusiness size={34} />
         <h1 className="text-3xl font-bold text-left my-12 text-white">
           Experience
