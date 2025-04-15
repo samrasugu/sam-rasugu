@@ -16,7 +16,7 @@ export default function AboutPage() {
         <SkillsSection />
         <EducationSection />
         <Link
-          className="flex text-base text-gray-200 gap-1 hover:underline mb-10 group"
+          className="flex justify-center text-base text-gray-200 hover:underline mb-10 group"
           href="/projects"
         >
           View my projects{" "}

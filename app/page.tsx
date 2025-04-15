@@ -41,7 +41,7 @@ export default function Home() {
             </a>
           </p>
           <Link
-            className=" text-base text-gray-200 gap-1 hover:underline mt-10 group"
+            className=" text-base text-gray-200 hover:underline mt-10 group"
             href="/about"
           >
             See more about me{" "}

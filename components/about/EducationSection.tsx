@@ -28,7 +28,7 @@ const EducationSection: React.FC = () => {
   ];
 
   return (
-    <div className="py-12 bg-primary-background">
+    <div className="md:pb-12 bg-primary-background">
       <div className="flex flex-row gap-7 items-center justify-start">
         <GraduationCap size={34} />
         <h1 className="text-3xl font-bold text-left my-12 text-white">

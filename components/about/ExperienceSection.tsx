@@ -24,7 +24,7 @@ const ExperienceSection: React.FC = () => {
     {
       title: "Software Engineer",
       company: "USAID - HealthIT",
-      companyUrl: "",
+      companyUrl: "#",
       period: "Sept 2023 - Nov 2024",
       location: "Nairobi, Kenya",
       description:
@@ -51,7 +51,7 @@ const ExperienceSection: React.FC = () => {
   ];
 
   return (
-    <div className="pb-12 bg-primary-background">
+    <div className="pt-12 bg-primary-background">
       <div className="flex flex-row gap-7 items-center my-12">
         <BriefcaseBusiness size={34} />
         <h1 className="text-3xl font-bold text-left text-white">
@@ -66,8 +66,8 @@ const ExperienceSection: React.FC = () => {
         {experiences.map((exp, index) => (
           <div key={index} className="flex flex-row items-start mb-16 relative">
             {/* timeline circle*/}
-            <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-white border-4 border-black z-10 md:flex items-center justify-center">
-              <div className="w-6 h-6 rounded-full bg-black"></div>
+            <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-white border-3 border-black z-10 md:flex items-center justify-center">
+              <div className="w-7 h-7 rounded-full bg-black"></div>
             </div>
 
             {/* content */}

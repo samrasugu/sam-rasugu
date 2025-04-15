@@ -60,7 +60,7 @@ export default function NavBar({ children }: LayoutProps) {
       </button>
 
       <aside
-        className={`fixed top-0 left-0 z-40 h-screen w-full md:w-64 transform transition-transform duration-300 ease-in-out border-r py-28 md:py-16 flex flex-col
+        className={`fixed top-0 left-0 z-40 h-screen w-full md:w-64 transform transition-transform duration-300 ease-in-out md:border-r py-28 md:py-16 flex flex-col
           ${isSidebarOpen ? "translate-y-0" : "-translate-x-full"} 
           md:translate-x-0 bg-primary-background shadow-lg border-gray-300/20`}
       >
