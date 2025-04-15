@@ -1,3 +1,4 @@
+import { GraduationCap } from "lucide-react";
 import React from "react";
 
 interface EducationItem {
@@ -18,7 +19,7 @@ const EducationSection: React.FC = () => {
       level: "Bachelor of Science",
       school: "University of Nairobi",
       schoolUrl: "https://uonbi.ac.ke",
-      period: "August 2020 - September 2024",
+      period: "August 2020",
       location: "Nairobi, Kenya",
       description:
         "Software Engineering, Data Structures and Algorithms, Human Centered Design, Computer Networks, Database Systems, Distributed Systems, Machine Learning, and Artificial Intelligence.",
@@ -28,9 +29,12 @@ const EducationSection: React.FC = () => {
 
   return (
     <div className="py-12 bg-primary-background">
-      <h1 className="text-3xl font-bold text-center mb-12 text-white">
-        Education
-      </h1>
+      <div className="flex flex-row gap-7 items-center justify-start">
+        <GraduationCap size={34} />
+        <h1 className="text-3xl font-bold text-left my-12 text-white">
+          Education
+        </h1>
+      </div>
 
       <div className="relative container mx-auto">
         {/* Vertical Timeline Line */}
@@ -63,7 +67,9 @@ const EducationSection: React.FC = () => {
                   {edu.credits}
                 </p>
                 <p className="text-gray-300 text-left text-base">
-                  <span className="font-bold text-white">Relevant coursework:</span>{" "}
+                  <span className="font-bold text-white">
+                    Relevant coursework:
+                  </span>{" "}
                   {edu.description}
                 </p>
               </div>

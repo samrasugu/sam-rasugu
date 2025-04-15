@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 import UIWrapper from "../UIWrapper";
 import { GrGithub } from "react-icons/gr";
 import Image from "next/image";
-import { Folder } from "lucide-react";
+import { ArrowUpRight, Folder } from "lucide-react";
 
 export default function ProjectsPage() {
   const projects = [
@@ -10,8 +12,8 @@ export default function ProjectsPage() {
       title: "NutriMate",
       description:
         "NutriMate is an intelligent nutrition chat system that leverages Retrieval Augmented Generation (RAG) to deliver personalized dietary guidance. The system combines a comprehensive nutrition knowledge base with advanced natural language processing capabilities to provide tailored recommendations based on users' unique health profiles, preferences, and goals.",
-      githublink: "https://github.com/samrasugu/sam-rasugu",
-      link: "https://github.com/samrasugu/sam-rasugu",
+      githublink: "https://github.com/samrasugu/nutrimate",
+      link: "https://github.com/samrasugu/nutrimate",
       image: "/images/NutriMate.png",
       techstack: [
         "Python",
@@ -108,9 +110,16 @@ export default function ProjectsPage() {
       ],
     },
   ];
+
+  const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <UIWrapper>
-      <div className="bg-primary-background py-10">
+      <div className="bg-primary-background py-16">
         <div className="flex flex-row gap-4 items-center">
           <Folder size={34} />
           <h1 className="text-3xl font-bold text-left my-10 text-white">
@@ -130,20 +139,33 @@ export default function ProjectsPage() {
                     alt={`Project ${index + 1}`}
                     className="rounded-lg object-fill object-center w-full"
                     fill={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="flex flex-col flex-1 gap-4 justify-between">
                   <h2 className="text-xl font-bold text-white">
                     {project.title}
                   </h2>
-                  <p className="text-base text-gray-300 text-ellipsis overflow-hidden line-clamp-5">
+                  <p
+                    onClick={() => toggleExpand(index)}
+                    className={`text-base text-gray-300 cursor-pointer ${
+                      expandedIndex === index
+                        ? ""
+                        : "text-ellipsis overflow-hidden line-clamp-5"
+                    }`}
+                    title={
+                      expandedIndex === index
+                        ? "Click to collapse"
+                        : "Click to expand"
+                    }
+                  >
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.techstack.map((tech, index) => (
                       <span
                         key={index}
-                        className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-sm"
+                        className="bg-transparent text-white px-2 py-1 rounded-full text-sm border border-gray-300/20"
                       >
                         {tech}
                       </span>
@@ -165,11 +187,12 @@ export default function ProjectsPage() {
 
                     <a
                       href={project.link}
-                      className="text-gray-300 underline"
+                      className="text-gray-300 underline text-sm group"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Project
+                      View Project{" "}
+                      <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
                     </a>
                   </div>
                 </div>
@@ -178,12 +201,50 @@ export default function ProjectsPage() {
           ))}
         </div>
         <div className="py-12">
-          <div className="flex flex-row gap-4 items-center">
+          <div className="flex flex-row gap-4 items-center my-7">
             <Folder size={34} />
-            <h1 className="text-3xl font-bold text-left my-10 text-white">
+            <h1 className="text-3xl font-bold text-left text-white">
               Other projects
             </h1>
           </div>
+          <ul className="list-disc list-inside text-gray-300 text-base">
+            <li className="gap-4 flex flex-row items-center">
+              CPIMS
+              <a
+                href="https://github.com/uonafya/cpims_mobile"
+                className="underline text-sm group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+                <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
+              </a>
+            </li>
+            <li className="gap-4 flex flex-row items-center">
+              CPIMS DCS
+              <a
+                href="https://github.com/uonafya/cpmis_dcs_mobile"
+                className="underline text-sm group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+                <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
+              </a>
+            </li>
+            <li className="gap-4 flex flex-row items-center">
+              Agrofi
+              <a
+                href="https://github.com/samrasugu/Agrofi"
+                className="underline text-sm group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project{" "}
+                <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </UIWrapper>
