@@ -179,7 +179,7 @@ export default function ProjectsPage() {
                         rel="noopener noreferrer"
                       >
                         <GrGithub
-                          className="text-gray-300 cursor-pointer"
+                          className="text-gray-300 cursor-pointer hover:text-white"
                           size={24}
                         />
                       </a>
@@ -187,7 +187,7 @@ export default function ProjectsPage() {
 
                     <a
                       href={project.link}
-                      className="text-gray-300 underline text-sm group"
+                      className="text-gray-300 underline text-sm group hover:text-white"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -212,7 +212,7 @@ export default function ProjectsPage() {
               CPIMS
               <a
                 href="https://github.com/uonafya/cpims_mobile"
-                className="underline text-sm group"
+                className="underline text-sm group hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -224,7 +224,7 @@ export default function ProjectsPage() {
               CPIMS DCS
               <a
                 href="https://github.com/uonafya/cpmis_dcs_mobile"
-                className="underline text-sm group"
+                className="underline text-sm group hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -236,7 +236,7 @@ export default function ProjectsPage() {
               Agrofi
               <a
                 href="https://github.com/samrasugu/Agrofi"
-                className="underline text-sm group"
+                className="underline text-sm group hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
