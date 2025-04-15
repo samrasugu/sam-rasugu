@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import Footer from "../footer/Footer";
+import Image from "next/image";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -34,8 +35,21 @@ export default function NavBar({ children }: LayoutProps) {
   ];
   return (
     <div className="min-h-screen bg-primary-background">
+      <Link
+        className="left-4 absolute md:hidden flex items-center justify-end top-4 rounded-full bg-primary-background shadow-xl border border-gray-300/30"
+        href="/"
+      >
+        <Image
+          src="/images/me_avatar.png"
+          alt="Sam Rasugu"
+          className="rounded-full w-12 h-12 object-cover"
+          width={100}
+          height={100}
+        />
+      </Link>
+
       <button
-        className="fixed top-4 left-4 z-50 p-2 rounded-xl md:hidden bg-primary-background shadow-xl border border-gray-300/30"
+        className="fixed top-4 right-4 z-50 p-2 rounded-xl md:hidden bg-primary-background shadow-xl border border-gray-300/30"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         {isSidebarOpen ? (
@@ -46,13 +60,22 @@ export default function NavBar({ children }: LayoutProps) {
       </button>
 
       <aside
-        className={`fixed top-0 left-0 z-40 h-screen w-64 transform transition-transform duration-200 ease-in-out border-r py-28 md:py-16 flex flex-col
-          ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
+        className={`fixed top-0 left-0 z-40 h-screen w-full md:w-64 transform transition-transform duration-300 ease-in-out border-r py-28 md:py-16 flex flex-col
+          ${isSidebarOpen ? "translate-y-0" : "-translate-x-full"} 
           md:translate-x-0 bg-primary-background shadow-lg border-gray-300/20`}
       >
-        <div className="h-16 flex items-center justify-start top-28 px-7">
-          <Link href="/">
-            <p className="text-3xl font-bold text-white">Sam Rasugu</p>
+        <div className="flex justify-start mb-8 relative mx-6">
+          <Link
+            className="bg-primary-background rounded-full shadow-xl border border-white/70"
+            href="/"
+          >
+            <Image
+              src="/images/me_avatar.png"
+              alt="Sam Rasugu"
+              className="rounded-full object-cover"
+              width={100}
+              height={100}
+            />
           </Link>
         </div>
 
@@ -63,7 +86,7 @@ export default function NavBar({ children }: LayoutProps) {
               href={item.href}
               className={`flex items-center space-x-3 p-3 rounded-xl hover:bg-primaryGreen/30 hover:text-primaryGreen transition-colors ${
                 pathname === item.href
-                  ? "text-white bg-primaryGreen/30 underline"
+                  ? "text-white bg-primaryGreen/30 font-semibold"
                   : "text-gray-400 bg-transparent"
               } `}
             >
@@ -72,7 +95,7 @@ export default function NavBar({ children }: LayoutProps) {
           ))}
         </nav>
 
-        <Footer/>
+        <Footer />
       </aside>
 
       <main
@@ -80,7 +103,9 @@ export default function NavBar({ children }: LayoutProps) {
           isSidebarOpen ? "md:ml-64" : "md:ml-64 ml-0"
         } min-h-screen`}
       >
-        <div className="flex flex-col items-center px-4 md:px-10 lg:px-20">{children}</div>
+        <div className="flex flex-col items-center px-4 md:px-10 lg:px-20">
+          {children}
+        </div>
       </main>
 
       {isSidebarOpen && (

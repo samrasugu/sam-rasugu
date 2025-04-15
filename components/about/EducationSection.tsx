@@ -19,7 +19,7 @@ const EducationSection: React.FC = () => {
       level: "Bachelor of Science",
       school: "University of Nairobi",
       schoolUrl: "https://uonbi.ac.ke",
-      period: "August 2020 - September 2024",
+      period: "August 2020",
       location: "Nairobi, Kenya",
       description:
         "Software Engineering, Data Structures and Algorithms, Human Centered Design, Computer Networks, Database Systems, Distributed Systems, Machine Learning, and Artificial Intelligence.",

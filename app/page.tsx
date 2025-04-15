@@ -1,4 +1,6 @@
+import Link from "next/link";
 import UIWrapper from "./UIWrapper";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -17,7 +19,12 @@ export default function Home() {
           </p>
           <p className="text-base text-gray-300">
             I am currently a Software Engineer at{" "}
-            <a href="https://www.monos.ai/" className="underline">
+            <a
+              href="https://www.monos.ai/"
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               MONOS
             </a>
             , where I work on building products for marketing, search, and
@@ -25,7 +32,7 @@ export default function Home() {
           </p>
           <p className="text-base text-gray-300">
             For my work history, check out my{" "}
-            <a href="" className="underline">
+            <a href="/docs/Sam_Mokua_CV.pdf" className="underline">
               resume
             </a>{" "}
             or{" "}
@@ -33,6 +40,13 @@ export default function Home() {
               get in touch
             </a>
           </p>
+          <Link
+            className=" text-base text-gray-200 gap-1 hover:underline mt-10 group"
+            href="/about"
+          >
+            See more about me{" "}
+            <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
+          </Link>
         </div>
       </div>
     </UIWrapper>
