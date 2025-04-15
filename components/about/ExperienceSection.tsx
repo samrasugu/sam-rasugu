@@ -23,12 +23,21 @@ const ExperienceSection: React.FC = () => {
     },
     {
       title: "Software Engineer",
+      company: "USAID - HealthIT",
+      companyUrl: "",
+      period: "Sept 2023 - Nov 2024",
+      location: "Nairobi, Kenya",
+      description:
+        "Contributed to the design, development, and successful release of CPIMS (Child Protection Information Management System) an open-source health platform that delivers reliable, prompt, and uniform countrywide information to support fact-driven planning on children protection programs",
+    },
+    {
+      title: "Software Engineer",
       company: "Savannah Informatics Limited",
       companyUrl: "https://www.savannahinformatics.com/",
       period: "July 2023 - May 2024",
       location: "Nairobi, Kenya",
       description:
-        "Actively contributed to the successful pilot and launch of myCareHub with the University of Nairobi and Johnson & Johnson, playing a key role in defining product requirements, designing, and piloting the UoNAfyaApp360 application. Played a key role in the maintenance and optimization of sghi_core, an open-source shared Flutter package critical for component and helper function management within the organization. Further enhanced team efficiency and collaboration by championing the adoption of SCRUM methodologies within the development workflow.",
+        "Actively contributed in developing, piloting, and maintaining UoNAfyaApp360 in collaboration with the University of Nairobi and Johnson & Johnson, playing a key role in defining product requirements, development, and launching the UoNAfyaApp360 application. Played a key role in the maintenance and optimization of sghi_core, an open-source shared Flutter package package for components, and helper functions for Flutter applications.",
     },
     {
       title: "Software Engineer",
@@ -37,15 +46,15 @@ const ExperienceSection: React.FC = () => {
       period: "May 2021 - July 2023",
       location: "Nairobi, Kenya",
       description:
-        "Worked as a Mobile Software Engineer in the development of Vitu Kwa Ground, a comprehensive platform for user engagement, reporting, and analytics. Involved in the creation of Agrofi, a mobile app and USSD platform designed to connect over 20,000 farmers, lenders, and suppliers, significantly impacting agricultural accessibility. Contributed to the successful application to the Microsoft Black Founders' Hub, showcasing a commitment to innovation and growth.",
+        "Worked as a Mobile Software Engineer in the development of Vitu Kwa Ground, a comprehensive platform for user engagement, reporting, and analytics. Involved in the creation of Agrofi, a mobile app and USSD platform designed to connect over 20,000 farmers, lenders, and suppliers, significantly impacting agricultural accessibility.",
     },
   ];
 
   return (
     <div className="pb-12 bg-primary-background">
-      <div className="flex flex-row gap-7 items-center">
+      <div className="flex flex-row gap-7 items-center my-12">
         <BriefcaseBusiness size={34} />
-        <h1 className="text-3xl font-bold text-left my-12 text-white">
+        <h1 className="text-3xl font-bold text-left text-white">
           Experience
         </h1>
       </div>
