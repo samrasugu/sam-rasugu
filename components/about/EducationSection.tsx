@@ -43,8 +43,8 @@ const EducationSection: React.FC = () => {
         {education.map((edu, index) => (
           <div key={index} className="flex flex-row items-start mb-16 relative">
             {/* Timeline Circle */}
-            <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-white border-4 border-black z-10 md:flex items-center justify-center">
-              <div className="w-6 h-6 rounded-full bg-black"></div>
+            <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-white border-3 border-black z-10 md:flex items-center justify-center">
+              <div className="w-7 h-7 rounded-full bg-black"></div>
             </div>
 
             {/* Content */}

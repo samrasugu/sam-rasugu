@@ -18,7 +18,8 @@ export default function Home() {
             teams to deliver high-quality products that meet user needs.
           </p>
           <p className="text-base text-gray-300">
-            I am currently a Software Engineer at{" "}
+            Currently, I'm building products for marketing, search, and events
+            at{" "}
             <a
               href="https://www.monos.ai/"
               className="underline"
@@ -27,8 +28,6 @@ export default function Home() {
             >
               MONOS
             </a>
-            , where I work on building products for marketing, search, and
-            events.
           </p>
           <p className="text-base text-gray-300">
             For my work history, check out my{" "}
