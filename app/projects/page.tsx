@@ -119,10 +119,10 @@ export default function ProjectsPage() {
 
   return (
     <UIWrapper>
-      <div className="bg-primary-background py-16">
+      <div className="bg-white dark:bg-primary-background py-16">
         <div className="flex flex-row gap-4 items-center">
-          <Folder size={34} />
-          <h1 className="text-3xl font-bold text-left my-10 text-white">
+          <Folder className="text-gray-900 dark:text-white" size={34} />
+          <h1 className="text-3xl font-bold text-left my-10 text-gray-700 dark:text-white">
             Projects
           </h1>
         </div>
@@ -130,7 +130,7 @@ export default function ProjectsPage() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="p-4 bg-primary-background rounded-xl flex flex-col gap-4 border border-gray-300/10 h-auto"
+              className="p-4 dark:bg-primary-background rounded-xl flex flex-col gap-4 border border-gray-300/50 dark:border-gray-300/10 h-auto"
             >
               <div className="flex flex-col gap-4 justify-between h-full">
                 <div className="flex flex-col w-full h-64 relative bg-center">
@@ -143,12 +143,12 @@ export default function ProjectsPage() {
                   />
                 </div>
                 <div className="flex flex-col flex-1 gap-4 justify-between">
-                  <h2 className="text-xl font-bold text-white">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     {project.title}
                   </h2>
                   <p
                     onClick={() => toggleExpand(index)}
-                    className={`text-base text-gray-300 cursor-pointer ${
+                    className={`text-base text-gray-700 dark:text-gray-300 cursor-pointer ${
                       expandedIndex === index
                         ? ""
                         : "text-ellipsis overflow-hidden line-clamp-5"
@@ -165,7 +165,7 @@ export default function ProjectsPage() {
                     {project.techstack.map((tech, index) => (
                       <span
                         key={index}
-                        className="bg-transparent text-white px-2 py-1 rounded-full text-sm border border-gray-300/20"
+                        className="bg-transparent text-gray-700 dark:text-white px-2 py-1 rounded-full text-sm border border-gray-300/50 dark:border-gray-300/20"
                       >
                         {tech}
                       </span>
@@ -179,7 +179,7 @@ export default function ProjectsPage() {
                         rel="noopener noreferrer"
                       >
                         <GrGithub
-                          className="text-gray-300 cursor-pointer hover:text-white"
+                          className="text-gray-700 dark:text-gray-300 cursor-pointer dark:hover:text-white"
                           size={24}
                         />
                       </a>
@@ -187,7 +187,7 @@ export default function ProjectsPage() {
 
                     <a
                       href={project.link}
-                      className="text-gray-300 underline text-sm group hover:text-white"
+                      className="text-gray-700 dark:text-gray-300 underline text-sm group dark:hover:text-white"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -202,17 +202,17 @@ export default function ProjectsPage() {
         </div>
         <div className="py-12">
           <div className="flex flex-row gap-4 items-center my-7">
-            <Folder size={34} />
-            <h1 className="text-3xl font-bold text-left text-white">
+            <Folder size={34} className="text-gray-900 dark:text-white" />
+            <h1 className="text-3xl font-bold text-left text-gray-700 dark:text-white">
               Other projects
             </h1>
           </div>
-          <ul className="list-disc list-inside text-gray-300 text-base">
+          <ul className="list-disc list-inside text-gray-800 dark:text-gray-300 text-base">
             <li className="gap-4 flex flex-row items-center">
               CPIMS
               <a
                 href="https://github.com/uonafya/cpims_mobile"
-                className="underline text-sm group hover:text-white"
+                className="underline text-sm group dark:hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -224,7 +224,7 @@ export default function ProjectsPage() {
               CPIMS DCS
               <a
                 href="https://github.com/uonafya/cpmis_dcs_mobile"
-                className="underline text-sm group hover:text-white"
+                className="underline text-sm group dark:hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -236,7 +236,7 @@ export default function ProjectsPage() {
               Agrofi
               <a
                 href="https://github.com/samrasugu/Agrofi"
-                className="underline text-sm group hover:text-white"
+                className="underline text-sm group dark:hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >

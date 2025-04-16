@@ -10,13 +10,13 @@ import { ArrowUpRight } from "lucide-react";
 export default function AboutPage() {
   return (
     <UIWrapper>
-      <div className="flex flex-col bg-primary-background">
+      <div className="flex flex-col bg-white dark:bg-primary-background">
         <DescriptionSection />
         <ExperienceSection />
         <SkillsSection />
         <EducationSection />
         <Link
-          className="flex justify-center text-base text-gray-200 hover:underline mb-10 group"
+          className="flex justify-center text-base text-gray-800 dark:text-gray-200 hover:underline mb-10 group"
           href="/projects"
         >
           View my projects{" "}

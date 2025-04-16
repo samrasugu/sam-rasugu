@@ -107,7 +107,7 @@ export default function NavBar({ children }: LayoutProps) {
         <div className="flex flex-col items-center px-4 md:px-10 lg:px-20">
           {children}
         </div>
-        <div className="absolute bottom-12 right-8 flex items-center justify-between px-4">
+        <div className="fixed bottom-12 right-8 flex items-center justify-between px-4">
           <ThemeToggle />
         </div>
       </main>
