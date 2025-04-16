@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import Footer from "../footer/Footer";
 import Image from "next/image";
+import ThemeToggle from "../buttons/ThemeToggle";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -34,7 +35,7 @@ export default function NavBar({ children }: LayoutProps) {
     },
   ];
   return (
-    <div className="min-h-screen bg-primary-background">
+    <div className="min-h-screen bg-white dark:bg-primary-background">
       <Link
         className="left-4 absolute md:hidden flex items-center justify-end top-4 rounded-full bg-primary-background shadow-xl border border-gray-300/30"
         href="/"
@@ -49,20 +50,20 @@ export default function NavBar({ children }: LayoutProps) {
       </Link>
 
       <button
-        className="fixed top-4 right-4 z-50 p-2 rounded-xl md:hidden bg-primary-background shadow-xl border border-gray-300/30"
+        className="fixed top-4 right-4 z-50 p-2 rounded-xl md:hidden bg-white dark:bg-primary-background shadow-xl border border-gray-300/30"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         {isSidebarOpen ? (
-          <X className="text-white" size={24} />
+          <X className="text-gray-900 dark:text-white" size={24} />
         ) : (
-          <Menu className="text-white" size={24} />
+          <Menu className="text-gray-900 dark:text-white" size={24} />
         )}
       </button>
 
       <aside
         className={`fixed top-0 left-0 z-40 h-screen w-full md:w-64 transform transition-transform duration-300 ease-in-out md:border-r py-28 md:py-16 flex flex-col
           ${isSidebarOpen ? "translate-y-0" : "-translate-x-full"} 
-          md:translate-x-0 bg-primary-background shadow-lg border-gray-300/20`}
+          md:translate-x-0 bg-white dark:bg-primary-background shadow-lg border-gray-300/20`}
       >
         <div className="flex justify-start mb-8 relative mx-6">
           <Link
@@ -84,10 +85,10 @@ export default function NavBar({ children }: LayoutProps) {
             <Link
               key={item.label}
               href={item.href}
-              className={`flex items-center space-x-3 p-3 rounded-xl hover:bg-primaryGreen/30 hover:text-primaryGreen transition-colors ${
+              className={`flex items-center space-x-3 p-3 rounded-xl transition-colors ${
                 pathname === item.href
-                  ? "text-white bg-primaryGreen/30 font-semibold"
-                  : "text-gray-400 bg-transparent"
+                  ? "dark:text-white font-semibold"
+                  : "text-gray-500 bg-transparent"
               } `}
             >
               <span className="font-medium">{item.label}</span>
@@ -106,11 +107,14 @@ export default function NavBar({ children }: LayoutProps) {
         <div className="flex flex-col items-center px-4 md:px-10 lg:px-20">
           {children}
         </div>
+        <div className="absolute bottom-12 right-8 flex items-center justify-between px-4">
+          <ThemeToggle />
+        </div>
       </main>
 
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-primary-background bg-opacity-50 z-30 md:hidden"
+          className="fixed inset-0 dark:bg-primary-background bg-opacity-50 z-30 md:hidden"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}

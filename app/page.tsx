@@ -5,19 +5,19 @@ import { ArrowUpRight } from "lucide-react";
 export default function Home() {
   return (
     <UIWrapper>
-      <div className="bg-primary-background">
+      <div className="bg-white dark:bg-primary-background">
         <div className="flex flex-col justify-center items-start gap-5 h-screen">
-          <p className="text-white text-5xl font-bold">
+          <p className="text-gray-900 dark:text-white text-5xl font-bold">
             Hi 👋, I&apos;m Sam Rasugu
           </p>
-          <p className="text-base text-gray-300">
+          <p className="text-base text-gray-700 dark:text-gray-300">
             I'm a Software Engineer with a passion for transforming ideas and
             building interactive applications. I have a strong foundation in
             software development, with a focus on mobile, web and backend
             technologies. My experience includes working with cross-functional
             teams to deliver high-quality products that meet user needs.
           </p>
-          <p className="text-base text-gray-300">
+          <p className="text-base text-gray-700 dark:text-gray-300">
             Currently, I'm building products for marketing, search, and events
             at{" "}
             <a
@@ -29,7 +29,7 @@ export default function Home() {
               MONOS
             </a>
           </p>
-          <p className="text-base text-gray-300">
+          <p className="text-base text-gray-700 dark:text-gray-300">
             For my work history, check out my{" "}
             <a href="/docs/Sam_Mokua_CV.pdf" className="underline">
               resume
@@ -40,7 +40,7 @@ export default function Home() {
             </a>
           </p>
           <Link
-            className=" text-base text-gray-200 hover:underline mt-10 group"
+            className="text-base dark:text-gray-200 hover:underline mt-10 group"
             href="/about"
           >
             See more about me{" "}
