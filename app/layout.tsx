@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 
 const inter = Inter({
   variable: "--font-inter",
+  display: "swap",
   subsets: ["latin"],
 });
 

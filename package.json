@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "vercel-build": "next build",
     "dev": "next dev",
     "build:test": "env APP_ENV=development next build",
     "build:prod": "env APP_ENV=production next build",
@@ -34,5 +35,9 @@
     "eslint-config-next": "15.2.3",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-linux-x64-gnu": "^4",
+    "@tailwindcss/oxide-linux-x64-musl": "^4"
   }
 }
