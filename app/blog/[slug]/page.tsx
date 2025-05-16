@@ -26,7 +26,7 @@ export default async function BlogDetailsPage({
   const post = await client.fetch<SanityDocument>(
     POST_QUERY,
     await params,
-    options
+    options,
   );
   const postImageUrl = post.image
     ? urlFor(post.image)?.width(550).height(310).url()
