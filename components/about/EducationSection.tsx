@@ -63,7 +63,9 @@ const EducationSection: React.FC = () => {
                   {edu.period} | {edu.location}
                 </p>
                 <p className="text-gray-700 dark:text-gray-400 mb-2">
-                  <span className="font-bold text-gray-700 dark:text-white">Grade:</span>{" "}
+                  <span className="font-bold text-gray-700 dark:text-white">
+                    Grade:
+                  </span>{" "}
                   {edu.credits}
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-left text-base">
