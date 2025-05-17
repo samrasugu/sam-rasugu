@@ -11,15 +11,15 @@ export default function Home() {
             Hi 👋, I&apos;m Sam Rasugu
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
-            I'm a Software Engineer with a passion for transforming ideas and
-            building interactive applications. I have a strong foundation in
+            I&apos;m a Software Engineer with a passion for transforming ideas
+            and building interactive applications. I have a strong foundation in
             software development, with a focus on mobile, web and backend
             technologies. My experience includes working with cross-functional
             teams to deliver high-quality products that meet user needs.
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
-            Currently, I'm building products for marketing, search, and events
-            at{" "}
+            Currently, I&apos;m building products for marketing, search, and
+            events at{" "}
             <a
               href="https://www.monos.ai/"
               className="underline"

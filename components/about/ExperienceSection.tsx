@@ -88,7 +88,9 @@ const ExperienceSection: React.FC = () => {
                 <p className="text-gray-700 dark:text-gray-400 mb-2">
                   {exp.period} | {exp.location}
                 </p>
-                <p className="text-gray-700 dark:text-gray-300 text-left">{exp.description}</p>
+                <p className="text-gray-700 dark:text-gray-300 text-left">
+                  {exp.description}
+                </p>
               </div>
             </div>
           </div>
