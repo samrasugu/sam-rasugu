@@ -1,1 +1,1 @@
-declare module '@sanity/eslint-config-studio';
+declare module "@sanity/eslint-config-studio";
