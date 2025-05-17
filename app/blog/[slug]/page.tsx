@@ -35,7 +35,7 @@ export default async function BlogDetailsPage({
   return (
     <UIWrapper>
       {" "}
-      <main className="container mx-auto min-h-screen w-full p-8 flex flex-col gap-4">
+      <main className="container mx-auto min-h-screen p-8 flex flex-col gap-4">
         <Link href="/blog" className="flex flex-row gap-4 items-center">
           <MoveLeft
             className="text-gray-700 font-bold dark:text-white"
@@ -52,6 +52,7 @@ export default async function BlogDetailsPage({
               alt={post.title}
               className="aspect-video rounded-xl"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         )}

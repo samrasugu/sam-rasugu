@@ -44,3 +44,7 @@ next-env.d.ts
 *.py[cod]
 __pycache__/
 *.pyd
+
+
+# vscode
+.vscode/

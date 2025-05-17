@@ -17,7 +17,9 @@ export const postType = defineType({
     }),
     defineField({
       name: 'category',
-      type: 'string',
+      title: 'Category',
+      type: 'reference',
+      to: [{type: 'postCategory'}],
       validation: (rule) => rule.required(),
     }),
     defineField({

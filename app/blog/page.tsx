@@ -10,7 +10,7 @@ import Image from "next/image";
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, description, slug, category, image, publishedAt}`;
+]|order(publishedAt desc)[0...12]{_id, title, description, slug, category->{ title, slug, description }, image, publishedAt}`;
 
 const options = { next: { revalidate: 30 } };
 
@@ -48,7 +48,7 @@ export default async function IndexPage() {
               <div className="p-4 flex flex-col gap-2">
                 <p className="flex flex-row gap-2 items-center">
                   <span className="text-xs text-gray-500 dark:text-gray-300">
-                    {post.category}
+                    {post.category?.title}
                   </span>
                   <span className="text-xs text-gray-500 dark:text-gray-300">
                     {` • ${new Date(post.publishedAt).toLocaleDateString()}`}
