@@ -31,7 +31,10 @@ export default function Home() {
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
             For my work history, check out my{" "}
-            <a href="/docs/Sam_Mokua_CV.pdf" className="underline">
+            <a
+              href="/docs/Sam_Rasugu_Software_Engineer_Resume.pdf"
+              className="underline"
+            >
               resume
             </a>{" "}
             or{" "}
