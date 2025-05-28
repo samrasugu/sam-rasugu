@@ -4,7 +4,7 @@ import { LuMail } from "react-icons/lu";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col justify-between dark:bg-primary-background px-7 gap-8">
+    <footer className="flex flex-col justify-between dark:bg-primary-background px-7 gap-8">
       <div className="flex flex-row gap-6">
         <a
           href="https://www.linkedin.com/in/sam-rasugu/"
@@ -37,6 +37,6 @@ export default function Footer() {
       <p className="text-gray-800 dark:text-gray-text text-xs">
         © 2025 Sam Rasugu
       </p>
-    </div>
+    </footer>
   );
 }

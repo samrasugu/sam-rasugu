@@ -19,7 +19,7 @@ const EducationSection: React.FC = () => {
       level: "Bachelor of Science",
       school: "University of Nairobi",
       schoolUrl: "https://uonbi.ac.ke",
-      period: "August 2020",
+      period: "",
       location: "Nairobi, Kenya",
       description:
         "Software Engineering, Data Structures and Algorithms, Human Centered Design, Computer Networks, Database Systems, Distributed Systems, Machine Learning, and Artificial Intelligence.",
@@ -60,7 +60,7 @@ const EducationSection: React.FC = () => {
                   </a>
                 </h3>
                 <p className="text-gray-700 dark:text-gray-400 mb-2">
-                  {edu.period} | {edu.location}
+                  {edu.period && edu.period} {edu.location}
                 </p>
                 <p className="text-gray-700 dark:text-gray-400 mb-2">
                   <span className="font-bold text-gray-700 dark:text-white">

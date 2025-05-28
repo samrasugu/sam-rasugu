@@ -35,7 +35,7 @@ export default function NavBar({ children }: LayoutProps) {
     },
   ];
   return (
-    <div className="min-h-screen bg-white dark:bg-primary-background">
+    <nav className="min-h-screen bg-white dark:bg-primary-background">
       <Link
         className="left-4 absolute md:hidden flex items-center justify-end top-4 rounded-full bg-primary-background shadow-xl border border-gray-300/30"
         href="/"
@@ -118,6 +118,6 @@ export default function NavBar({ children }: LayoutProps) {
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
-    </div>
+    </nav>
   );
 }
