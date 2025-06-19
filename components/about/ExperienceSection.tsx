@@ -51,7 +51,7 @@ const ExperienceSection: React.FC = () => {
   ];
 
   return (
-    <div className="pt-12 bg-white dark:bg-primary-background">
+    <section className="pt-12 bg-white dark:bg-primary-background">
       <div className="flex flex-row gap-7 items-center my-12">
         <BriefcaseBusiness
           size={34}
@@ -96,7 +96,7 @@ const ExperienceSection: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

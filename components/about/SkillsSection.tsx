@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SkillsSection() {
   return (
-    <div className="my-12 bg-white dark:bg-primary-background flex flex-col items-center text-center">
+    <section className="my-12 bg-white dark:bg-primary-background flex flex-col items-center text-center">
       <div className="flex flex-row gap-4 items-center mb-12">
         <PenLine size={34} className="text-gray-900 dark:text-white" />
         <h1 className="text-3xl font-bold text-left text-gray-800 dark:text-white">
@@ -17,6 +17,6 @@ export default function SkillsSection() {
         MySQL) / MongoDB / Flask / Git / GitHub / REST APIs / Figma / AWS (EC2,
         Amplify, Route53, Cloudfront, RDS, VPC & ELB ) / Firebase
       </p>
-    </div>
+    </section>
   );
 }
