@@ -5,17 +5,16 @@ import { ArrowUpRight } from "lucide-react";
 export default function Home() {
   return (
     <UIWrapper>
-      <div className="bg-white dark:bg-primary-background">
+      <section className="bg-white dark:bg-primary-background">
         <div className="flex flex-col justify-center items-start gap-5 h-screen">
           <p className="text-gray-900 dark:text-white text-5xl font-bold">
             Hi 👋, I&apos;m Sam Rasugu
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
-            I&apos;m a Software Engineer with a passion for transforming ideas
-            and building interactive applications. I have a strong foundation in
-            software development, with a focus on mobile, web and backend
-            technologies. My experience includes working with cross-functional
-            teams to deliver high-quality products that meet user needs.
+            I&apos;m a Software Engineer with 3+ years building production
+            applications at scale. I specialize in full-stack development and
+            have experience delivering solutions for complex, multi-user
+            platforms using TypeScript, React, Next.js, Flutter, and Python.
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
             Currently, I&apos;m building products for marketing, search, and
@@ -31,10 +30,7 @@ export default function Home() {
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
             For my work history, check out my{" "}
-            <a
-              href="/docs/Sam_Rasugu_Software_Engineer_Resume.pdf"
-              className="underline"
-            >
+            <a href="/docs/Sam-Rasugu-Resume.pdf" className="underline">
               resume
             </a>{" "}
             or{" "}
@@ -50,7 +46,7 @@ export default function Home() {
             <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
           </Link>
         </div>
-      </div>
+      </section>
     </UIWrapper>
   );
 }
