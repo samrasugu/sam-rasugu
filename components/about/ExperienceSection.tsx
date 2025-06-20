@@ -63,17 +63,14 @@ const ExperienceSection: React.FC = () => {
       </div>
 
       <div className="relative container mx-auto">
-        {/* vertical timeline line */}
         <div className="hidden md:absolute md:flex left-6 top-0 h-full w-1 bg-gray-800 dark:bg-white"></div>
 
         {experiences.map((exp, index) => (
           <div key={index} className="flex flex-row items-start mb-16 relative">
-            {/* timeline circle*/}
             <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gray-700 dark:bg-white border-3 border-white dark:border-black z-10 md:flex items-center justify-center">
               <div className="w-7 h-7 rounded-full bg-white dark:bg-black"></div>
             </div>
 
-            {/* content */}
             <div className="md:ml-16 w-full">
               <div className="flex flex-col bg-white dark:bg-primary-background p-4 rounded-lg items-start border border-gray-500 dark:border-gray-300/10">
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
