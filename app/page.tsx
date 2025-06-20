@@ -11,10 +11,11 @@ export default function Home() {
             Hi 👋, I&apos;m Sam Rasugu
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
-            I&apos;m a Software Engineer with 3+ years building production
-            applications at scale. I specialize in full-stack development and
-            have experience delivering solutions for complex, multi-user
-            platforms using TypeScript, React, Next.js, Flutter, and Python.
+            I&apos;m a Software Engineer with 3+ years experience building
+            production applications at scale. I specialize in full-stack
+            development and have experience delivering solutions for complex,
+            multi-user platforms using TypeScript, React, Next.js, Flutter, and
+            Python.
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
             Currently, I&apos;m building products for marketing, search, and

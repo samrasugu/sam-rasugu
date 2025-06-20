@@ -22,13 +22,13 @@ const EducationSection: React.FC = () => {
       period: "",
       location: "Nairobi, Kenya",
       description:
-        "Software Engineering, Data Structures and Algorithms, Human Centered Design, Computer Networks, Database Systems, Distributed Systems, Machine Learning, and Artificial Intelligence.",
+        "Software Engineering, Data Structures and Algorithms, Distributed Systems, Database Systems, Machine Learning, Artificial Intelligence, Computer Networks, and Human Centered Design.",
       credits: "Second Class Honors Upper Division",
     },
   ];
 
   return (
-    <div className="md:pb-12 bg-white dark:bg-primary-background">
+    <section className="md:pb-12 bg-white dark:bg-primary-background">
       <div className="flex flex-row gap-7 items-center justify-start">
         <GraduationCap size={34} className="text-gray-900 dark:text-white" />
         <h1 className="text-3xl font-bold text-left my-12 text-gray-800 dark:text-white">
@@ -37,17 +37,14 @@ const EducationSection: React.FC = () => {
       </div>
 
       <div className="relative container mx-auto">
-        {/* Vertical Timeline Line */}
         <div className="hidden md:absolute md:flex left-6 top-0 h-full w-1 bg-gray-800 dark:bg-white"></div>
 
         {education.map((edu, index) => (
           <div key={index} className="flex flex-row items-start mb-16 relative">
-            {/* Timeline Circle */}
             <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gray-700 dark:bg-white border-3 border-white dark:border-black z-10 md:flex items-center justify-center">
               <div className="w-7 h-7 rounded-full bg-white dark:bg-black"></div>
             </div>
 
-            {/* Content */}
             <div className="md:ml-16 w-full">
               <div className="flex flex-col bg-white dark:bg-primary-background p-4 rounded-lg items-start border border-gray-500 dark:border-gray-300/10">
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
@@ -55,6 +52,8 @@ const EducationSection: React.FC = () => {
                   <a
                     href={edu.schoolUrl}
                     className="text-gray-700 dark:text-white hover:underline ml-1 font-bold"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {edu.school}
                   </a>
@@ -79,7 +78,7 @@ const EducationSection: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
