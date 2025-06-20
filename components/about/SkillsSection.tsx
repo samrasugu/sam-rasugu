@@ -2,8 +2,38 @@ import { PenLine } from "lucide-react";
 import React from "react";
 
 export default function SkillsSection() {
+  const skillCategories = [
+    {
+      title: "Languages",
+      skills: ["TypeScript", "JavaScript", "Python", "Dart"],
+    },
+    {
+      title: "Frontend",
+      skills: ["React", "Next.js", "React Native", "Flutter", "Tailwind CSS"],
+    },
+    {
+      title: "Backend",
+      skills: ["Node.js", "Express.js", "Flask"],
+    },
+    {
+      title: "Databases",
+      skills: ["PostgreSQL", "MySQL", "MongoDB"],
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: [
+        "AWS (EC2, Amplify, Route53, CloudFront, RDS, VPC, ELB)",
+        "Firebase",
+      ],
+    },
+    {
+      title: "Tools",
+      skills: ["Git", "GitHub", "Figma"],
+    },
+  ];
+
   return (
-    <section className="my-12 bg-white dark:bg-primary-background flex flex-col items-center text-center">
+    <section className="my-12 bg-white dark:bg-primary-background">
       <div className="flex flex-row gap-4 items-center mb-12">
         <PenLine size={34} className="text-gray-900 dark:text-white" />
         <h1 className="text-3xl font-bold text-left text-gray-800 dark:text-white">
@@ -11,12 +41,25 @@ export default function SkillsSection() {
         </h1>
       </div>
 
-      <p className="text-gray-700 dark:text-gray-300 text-center text-base font-semibold px-4 md:px-10 lg:px-20 xl:px-40">
-        TypeScript / JavaScript / Python / Flutter/Dart / React / Next.js /
-        React Native / Tailwind CSS / Node.js / Express.js / SQL (PostgreSQL,
-        MySQL) / MongoDB / Flask / Git / GitHub / REST APIs / Figma / AWS (EC2,
-        Amplify, Route53, Cloudfront, RDS, VPC & ELB ) / Firebase
-      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {skillCategories.map((category, index) => (
+          <div key={index} className="text-left">
+            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-3">
+              {category.title}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {category.skills.map((skill, skillIndex) => (
+                <span
+                  key={skillIndex}
+                  className="bg-transparent text-gray-700 dark:text-white px-2 py-1 rounded-full text-sm border border-gray-300/50 dark:border-gray-300/20"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
