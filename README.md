@@ -1,23 +1,75 @@
 Personal portfolio built with [NextJS](https://nextjs.org), [TypeScript](https://www.typescriptlang.org/), and [TailwindCSS](https://tailwindcss.com/).
 
-## How to run
+# 🧑🏾‍💻 Sam Rasugu – Portfolio Website
 
-First, install all required packages:
+Welcome to the source code for [samrasugu.com](https://samrasugu.com), my personal portfolio site. Built with modern web technologies, this site showcases my work, skills, and experience as a software engineer.
+
+![Screenshot](https://samrasugu.com/og-image.jpg)
+
+## 🚀 Tech Stack
+
+- **Next.js** – React framework for production-grade apps
+- **TypeScript** – Static typing for improved code quality
+- **Tailwind CSS** – Utility-first CSS framework for rapid UI development
+- **Sanity.io** – Headless CMS for managing content
+
+## 🎯 Features
+
+- 📄 Dynamic pages (Projects, Experience, Contact) powered by Sanity
+- 🌙 Responsive design with a clean, modern UI
+- ⚡ Optimized performance and SEO
+- 🧠 Fully typed and maintainable codebase
+
+## 📁 Project Structure
+
 ```bash
-npm install
+.
+├── app/                 # Next.js app directory
+├── components/          # Reusable React components
+├── lib/                 # Utility functions and CMS setup
+├── sanity/              # Sanity schema and config
+├── public/              # Static assets
+├── styles/              # Global styles and Tailwind config
+├── tsconfig.json        # TypeScript configuration
+└── ...
 ```
 
-Then run the development server:
-```bash
-make dev
-```
-or
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Setup & Development
+
+# 1. Clone the repo
+```git clone https://github.com/your-username/portfolio.git```
+```cd portfolio```
+
+# 2. Install dependencies
+```npm install```
+
+# 3. Set up environment variables
+```cp .env.example .env.local```
+# Fill in the required values in `.env.local`
+
+# 4. Run the development server
+```npm run dev```
+
+
+## 🧩 Sanity Studio
+# Navigate to the Sanity folder
+```cd sanity```
+
+# Install dependencies
+```npm install```
+
+# Start the Sanity Studio
+```npm run dev```
+
+Make sure you have a Sanity project set up. Learn more at [Sanity.io](www.sanity.io).
+
+
+## 🧪 Linting & Formatting
+# Lint the project
+```npm run lint```
+
+# Format code using Prettier
+```npm run format```
+
+
+
