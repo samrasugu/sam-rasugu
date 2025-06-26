@@ -59,7 +59,7 @@ Welcome to the source code for [samrasugu.com](https://samrasugu.com), my person
 ### Start the Sanity Studio
 ```npm run dev```
 
-Make sure you have a Sanity project set up. Learn more at [Sanity.io](www.sanity.io).
+Make sure you have a Sanity project set up. Learn more at [Sanity.io](https://sanity.io).
 
 
 ## 🧪 Linting & Formatting
