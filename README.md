@@ -4,7 +4,7 @@ Personal portfolio built with [NextJS](https://nextjs.org), [TypeScript](https:/
 
 Welcome to the source code for [samrasugu.com](https://samrasugu.com), my personal portfolio site. Built with modern web technologies, this site showcases my work, skills, and experience as a software engineer.
 
-![Screenshot](https://samrasugu.com/og-image.jpg)
+![Screenshot](/public/screenshot.png")
 
 ## 🚀 Tech Stack
 
