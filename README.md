@@ -2,7 +2,7 @@
 
 Welcome to the source code for [samrasugu.com](https://samrasugu.com), my personal portfolio site. Built with modern web technologies, this site showcases my work, skills, and experience as a software engineer.
 
-![Screenshot](/public/screenshot.png")
+![Screenshot](./public/screenshot.png")
 
 ## 🚀 Tech Stack
 
@@ -34,40 +34,38 @@ Welcome to the source code for [samrasugu.com](https://samrasugu.com), my person
 
 ## 🛠️ Setup & Development
 
-# 1. Clone the repo
-```git clone https://github.com/your-username/portfolio.git```
+### 1. Clone the repo
+```git clone https://github.com/samrasugu/sam-rasugu.git```
 ```cd portfolio```
 
-# 2. Install dependencies
+### 2. Install dependencies
 ```npm install```
 
-# 3. Set up environment variables
+### 3. Set up environment variables
 ```cp .env.example .env.local```
-# Fill in the required values in `.env.local`
+<p>Fill in the required values in `.env.local`<p>
 
-# 4. Run the development server
+### 4. Run the development server
 ```npm run dev```
 
 
 ## 🧩 Sanity Studio
-# Navigate to the Sanity folder
+### Navigate to the Sanity folder
 ```cd sanity```
 
-# Install dependencies
+### Install dependencies
 ```npm install```
 
-# Start the Sanity Studio
+### Start the Sanity Studio
 ```npm run dev```
 
 Make sure you have a Sanity project set up. Learn more at [Sanity.io](www.sanity.io).
 
 
 ## 🧪 Linting & Formatting
-# Lint the project
+### Lint the project
 ```npm run lint```
 
-# Format code using Prettier
+### Format code using Prettier
 ```npm run format```
-
-
 
