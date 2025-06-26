@@ -36,6 +36,7 @@ Welcome to the source code for [samrasugu.com](https://samrasugu.com), my person
 
 ### 1. Clone the repo
 ```git clone https://github.com/samrasugu/sam-rasugu.git```
+
 ```cd portfolio```
 
 ### 2. Install dependencies
