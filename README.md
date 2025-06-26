@@ -25,7 +25,7 @@ Welcome to the source code for [samrasugu.com](https://samrasugu.com), my person
 ├── app/                 # Next.js app directory
 ├── components/          # Reusable React components
 ├── lib/                 # Utility functions and CMS setup
-├── sanity/              # Sanity schema and config
+├── studio-cms/          # Sanity schema and config
 ├── public/              # Static assets
 ├── styles/              # Global styles and Tailwind config
 ├── tsconfig.json        # TypeScript configuration
@@ -51,7 +51,7 @@ Welcome to the source code for [samrasugu.com](https://samrasugu.com), my person
 
 ## 🧩 Sanity Studio
 ### Navigate to the Sanity folder
-```cd sanity```
+```cd studio-cms```
 
 ### Install dependencies
 ```npm install```
