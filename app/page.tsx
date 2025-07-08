@@ -1,8 +1,10 @@
 import Link from "next/link";
 import UIWrapper from "./UIWrapper";
 import { ArrowUpRight } from "lucide-react";
+import { getResume } from "@/lib/resume";
 
-export default function Home() {
+export default async function Home() {
+  const resume = await getResume();
   return (
     <UIWrapper>
       <section className="bg-white dark:bg-primary-background">
@@ -11,14 +13,19 @@ export default function Home() {
             Hi 👋, I&apos;m Sam Rasugu
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
-            I&apos;m a Software Engineer who turns complex requirements into
-            elegant, production-ready solutions. I specialize in full-stack
-            development with TypeScript, React, Next.js, Node.js, Flutter, and
-            Python.
+            I&apos;m a Software Engineer who transforms complex ideas into
+            elegant, production-ready solutions. I specialize in full-stack and
+            cross-platform development using TypeScript, React, Next.js,
+            Node.js, Flutter, and Python.
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300">
             For my work history, check out my{" "}
-            <a href="/docs/Sam-Rasugu-Resume.pdf" className="underline">
+            <a
+              href={resume?.fileUrl || "/docs/Sam-Rasugu-Resume.pdf"}
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               resume
             </a>{" "}
             or{" "}
