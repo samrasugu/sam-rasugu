@@ -5,15 +5,22 @@ export default function SkillsSection() {
   const skillCategories = [
     {
       title: "Languages",
-      skills: ["TypeScript", "JavaScript", "Python", "Dart"],
+      skills: ["TypeScript", "JavaScript", "Python"],
     },
     {
       title: "Frontend",
-      skills: ["React", "Next.js", "React Native", "Flutter", "Tailwind CSS"],
+      skills: [
+        "React",
+        "Next.js",
+        "Flutter",
+        "React Native",
+        "Jest",
+        "Tailwind CSS",
+      ],
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express.js", "Flask"],
+      skills: ["Node.js", "Express.js", "Flask", "REST APIs", "Pytest"],
     },
     {
       title: "Databases",
@@ -21,14 +28,11 @@ export default function SkillsSection() {
     },
     {
       title: "Cloud & DevOps",
-      skills: [
-        "AWS (EC2, Amplify, Route53, CloudFront, RDS, VPC, ELB)",
-        "Firebase",
-      ],
+      skills: ["AWS", "Firebase", "Docker"],
     },
     {
       title: "Tools",
-      skills: ["Git", "GitHub", "Figma"],
+      skills: ["Git", "Flutter Test", "Figma"],
     },
   ];
 

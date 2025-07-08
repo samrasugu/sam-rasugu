@@ -11,10 +11,10 @@ export default function DescriptionSection() {
         </h1>
       </div>
       <p className="text-gray-700 dark:text-gray-300">
-        I&apos;m Sam Rasugu, a Software Engineer with 3+ years of experience
-        building full-stack production applications that serve users globally. I
-        specialize in building scalable solutions using TypeScript, React,
-        Next.js, Flutter, and Python.
+        I&apos;m a Software Engineer who turns complex requirements into
+        elegant, production-ready solutions. I specialize in full-stack
+        development with TypeScript, React, Next.js, Node.js, Flutter, and
+        Python.
       </p>
       <p className="text-gray-700 dark:text-gray-300 mt-4">
         Beyond development, I&apos;m expanding my expertise in cloud
