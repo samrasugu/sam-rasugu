@@ -61,6 +61,10 @@ export const projectType = defineType({
       type: 'url',
     }),
     defineField({
+      name: 'appStoreUrl',
+      type: 'url',
+    }),
+    defineField({
       name: 'technologies',
       type: 'array',
       of: [{type: 'string'}],

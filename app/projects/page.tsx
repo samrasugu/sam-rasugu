@@ -6,7 +6,7 @@ import ProjectsComponent from "@/components/projects/ProjectsComponent";
 const PROJECTS_QUERY = `*[
   _type == "project"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, description, slug, category->{ title, slug, description }, featuredImage, github, liveUrl, technologies, featured, isOther, publishedAt}`;
+]|order(publishedAt desc)[0...12]{_id, title, description, slug, category->{ title, slug, description }, featuredImage, github, liveUrl, appStoreUrl, technologies, featured, isOther, publishedAt}`;
 
 const options = { next: { revalidate: 30 } };
 

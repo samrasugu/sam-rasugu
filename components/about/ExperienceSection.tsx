@@ -78,6 +78,8 @@ const ExperienceSection: React.FC = () => {
                   <a
                     href={exp.companyUrl}
                     className="text-gray-700 dark:text-white hover:underline ml-1 font-bold"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {exp.company}
                   </a>
