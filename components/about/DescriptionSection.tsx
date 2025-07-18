@@ -3,7 +3,7 @@ import React from "react";
 
 export default function DescriptionSection() {
   return (
-    <section className="pt-16 bg-white dark:bg-primary-background">
+    <section className="md:pt-16 bg-white dark:bg-primary-background">
       <div className="flex flex-row gap-7 items-center my-7">
         <User size={34} className="text-gray-900 dark:text-white" />
         <h1 className="text-3xl font-bold text-left text-gray-900 dark:text-white">

@@ -37,6 +37,7 @@ export interface Project {
   body?: PortableTextBlock[];
   github?: string;
   liveUrl?: string;
+  appStoreUrl?: string;
   technologies: string[];
   featured: boolean;
   isOther: boolean;

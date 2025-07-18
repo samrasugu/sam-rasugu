@@ -6,9 +6,5 @@ interface UIWrapperProps {
 }
 
 export default function UIWrapper({ children }: UIWrapperProps) {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <NavBar>{children}</NavBar>
-    </div>
-  );
+  return <NavBar>{children}</NavBar>;
 }
