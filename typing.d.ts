@@ -43,3 +43,9 @@ export interface Project {
   isOther: boolean;
   isActive: boolean;
 }
+
+export interface Resume {
+  title: string;
+  fileUrl: string;
+  updatedAt: string;
+}

@@ -38,10 +38,6 @@ export default function ProjectCard({
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   // platform type from URL
   const getPlatformType = (url: string) => {
     if (url.includes("play.google.com") || url.includes("android")) {
@@ -99,7 +95,10 @@ export default function ProjectCard({
   };
 
   return (
-    <div className="p-4 dark:bg-primary-background rounded-xl flex flex-col gap-4 border border-gray-300/50 dark:border-gray-300/10 w-full h-auto">
+    <div
+      className="p-4 dark:bg-primary-background rounded-xl flex flex-col gap-4 border border-gray-300/50 dark:border-gray-300/10 w-full h-auto"
+      aria-labelledby={`project-${index}-title`}
+    >
       <div className="flex flex-col gap-4 justify-between h-full">
         {project.featuredImage && (
           <div className="flex flex-col w-full h-64 relative bg-center">
@@ -119,11 +118,20 @@ export default function ProjectCard({
             {project.title}
           </h2>
           <p
-            onClick={toggleExpand}
+            onClick={() => setIsExpanded(!isExpanded)}
             className={`text-base text-gray-700 dark:text-gray-300 cursor-pointer ${
               isExpanded ? "" : "text-ellipsis overflow-hidden line-clamp-5"
             }`}
             title={isExpanded ? "Click to collapse" : "Click to expand"}
+            aria-expanded={isExpanded}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setIsExpanded(!isExpanded);
+              }
+            }}
           >
             {project.description}
           </p>
