@@ -11,8 +11,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sam Rasugu",
-  description: "samrasugu",
+  title: "Sam Rasugu - Software Engineer",
+  description:
+    "Software Engineer specializing in full-stack and cross-platform development using TypeScript, React, Next.js, Node.js, Flutter, and Python.",
+  keywords: ["Software Engineer", "TypeScript", "React", "Next.js", "Flutter"],
+  authors: [{ name: "Sam Rasugu" }],
+  openGraph: {
+    title: "Sam Rasugu - Software Engineer",
+    description: "Software Engineer specializing in full-stack development",
+    url: "https://samrasugu.com",
+    siteName: "Sam Rasugu Portfolio",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

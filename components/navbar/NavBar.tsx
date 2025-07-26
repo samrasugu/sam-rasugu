@@ -27,7 +27,7 @@ export default function NavBar({ children }: NavBarProps) {
   return (
     <div className="bg-white dark:bg-primary-background min-h-screen relative">
       {/* mobile header */}
-      <div className="md:hidden fixed top-4 left-4 right-4 z-50 flex justify-between items-center">
+      <header className="md:hidden fixed top-4 left-4 right-4 z-50 flex justify-between items-center">
         <Link
           href="/"
           className="flex items-center rounded-full bg-primary-background shadow-xl border border-gray-300/30"
@@ -38,6 +38,7 @@ export default function NavBar({ children }: NavBarProps) {
             className="rounded-full w-12 h-12 object-cover"
             width={48}
             height={48}
+            priority
           />
         </Link>
 
@@ -53,7 +54,7 @@ export default function NavBar({ children }: NavBarProps) {
             <Menu className="text-gray-900 dark:text-white" size={24} />
           )}
         </button>
-      </div>
+      </header>
 
       {/* sidebar */}
       <aside
@@ -74,6 +75,7 @@ export default function NavBar({ children }: NavBarProps) {
               className="rounded-full object-cover"
               width={100}
               height={100}
+              priority
             />
           </Link>
         </div>
