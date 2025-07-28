@@ -11,32 +11,38 @@ interface ExperienceItem {
   description: string;
   keyHighlights?: string[];
   technologies?: string[];
+  active?: boolean;
 }
 
 const ExperienceSection: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 1,
-      title: "Technical Consultant & Digital Lead",
-      company: "Tunda Consulting",
-      companyUrl: "https://tundaconsulting.co",
+      title: "Full Stack Engineer",
+      company: "C4DLab - University of Nairobi",
+      companyUrl: "http://c4dlab.uonbi.ac.ke/",
       period: "Feb 2025 - Present",
-      location: "Nairobi, Kenya - Part-time(Remote)",
+      location: "Nairobi, Kenya - Full-time(Hybrid)",
       description:
-        "At Tunda Consulting, I lead all things digital — from engineering to brand strategy. As a trusted technical advisor, I help shape how the company shows up online and how it builds digital products for clients.",
+        "At C4DLab, the R&D arm of the University of Nairobi's School of Computing & Informatics, I led software engineering and digital infrastructure for research-driven platforms. As the lab’s sole engineer, I owned projects from concept to deployment while supporting the institution’s innovation goals.",
       keyHighlights: [
-        "Designed and developed the company's website using Next.js and TailwindCSS, hosted on Vercel — optimized for mobile, SEO, and fast load times.",
-        "Own the full visual identity, brand strategy, and media presence — aligning design systems with service offerings.",
-        "Guide internal tooling and architecture decisions, working closely with the founding team on product and technical strategy.",
-        "Collaborate on proposals, pitch decks, and messaging — blending technology with clear, compelling storytelling.",
+        "Built and maintained performant full-stack platforms supporting institutional research and incubation projects. Emphasized scalable architecture and modular, maintainable code.",
+        "Configured and managed cloud-based hosting environments — including domain setup, SSL, and deployment automation — ensuring uptime and performance monitoring.",
+        "Provided ongoing system support and technical troubleshooting, rolling out updates and preemptive optimizations.",
+        "Designed and maintained digital branding assets, pitch decks, and cross-platform content systems to support the lab’s outreach and identity.",
+        "Collaborated with faculty and institutional partners to advise on infrastructure planning, storytelling tooling, and product growth strategy.",
       ],
       technologies: [
-        "AWS",
+        "React",
         "Next.js",
         "TypeScript",
+        "Node.js",
+        "AWS",
+        "DigitalOcean",
+        "Canva",
         "Figma",
-        "Vercel",
         "Tailwind CSS",
+        "PostgreSQL",
       ],
     },
     {
@@ -45,7 +51,7 @@ const ExperienceSection: React.FC = () => {
       company: "MONOS",
       companyUrl: "https://monos.ai",
       period: "April 2024 - July 2025",
-      location: "Manchester, UK - Full-time(Remote)",
+      location: "Manchester, UK - Part-time(Remote)",
       description:
         "At MONOS, I worked on a suite of mission-driven digital platforms spanning education, humanitarian aid, and commerce — often from the ground up. I contributed to both frontend architecture and full product development, collaborating remotely across teams.",
       keyHighlights: [
