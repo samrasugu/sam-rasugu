@@ -21,7 +21,7 @@ const ExperienceSection: React.FC = () => {
       title: "Full Stack Engineer",
       company: "C4DLab - University of Nairobi",
       companyUrl: "http://c4dlab.uonbi.ac.ke/",
-      period: "Feb 2025 - Present",
+      period: "Dec 2023 - Present",
       location: "Nairobi, Kenya - Full-time(Hybrid)",
       description:
         "At C4DLab, the R&D arm of the University of Nairobi's School of Computing & Informatics, I led software engineering and digital infrastructure for research-driven platforms. As the lab’s sole engineer, I owned projects from concept to deployment while supporting the institution’s innovation goals.",
@@ -153,7 +153,8 @@ const ExperienceSection: React.FC = () => {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="flex flex-row items-start mb-16 relative"
+            className="flex flex-row items-start mb-16 relative animate-fadeIn"
+            style={{ animationDelay: `${exp.id * 100}ms` }}
           >
             <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gray-700 dark:bg-white border-3 border-white dark:border-black z-10 md:flex items-center justify-center">
               <div className="w-7 h-7 rounded-full bg-white dark:bg-black"></div>
@@ -161,13 +162,14 @@ const ExperienceSection: React.FC = () => {
 
             <div className="md:ml-16 w-full">
               <div className="flex flex-col bg-white dark:bg-primary-background p-4 rounded-lg items-start border border-gray-500 dark:border-gray-300/10">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-300 leading-tight">
                   {exp.title} @
                   <a
                     href={exp.companyUrl}
-                    className="text-gray-700 dark:text-white hover:underline ml-1 font-bold"
+                    className="text-gray-700 dark:text-white hover:underline ml-1 font-bold text-lg"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit ${exp.company} website`}
                   >
                     {exp.company}
                   </a>
@@ -175,11 +177,11 @@ const ExperienceSection: React.FC = () => {
                 <p className="text-gray-700 dark:text-gray-400 mb-2">
                   {exp.period} | {exp.location}
                 </p>
-                <p className="text-gray-700 dark:text-gray-300 text-left">
+                <p className="text-gray-700 dark:text-gray-text text-left">
                   {exp.description}
                 </p>
                 {exp.keyHighlights && exp.keyHighlights.length > 0 && (
-                  <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-text">
                     {exp.keyHighlights.map((highlight, index) => (
                       <li className="py-2" key={index}>
                         {highlight}
