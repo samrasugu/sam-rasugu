@@ -24,7 +24,7 @@ const ExperienceSection: React.FC = () => {
       period: "Dec 2023 - Present",
       location: "Nairobi, Kenya - Full-time(Hybrid)",
       description:
-        "At C4DLab, the R&D arm of the University of Nairobi's School of Computing & Informatics, I led software engineering and digital infrastructure for research-driven platforms. As the lab’s sole engineer, I owned projects from concept to deployment while supporting the institution’s innovation goals.",
+        "At C4DLab, the R&D arm of the University of Nairobi’s School of Computing & Informatics, I currently lead software engineering and digital infrastructure efforts for research-focused platforms. I work closely with faculty, researchers, and partners to design, build, and scale solutions that support the lab’s innovation and digital transformation initiatives.",
       keyHighlights: [
         "Built and maintained performant full-stack platforms supporting institutional research and incubation projects. Emphasized scalable architecture and modular, maintainable code.",
         "Configured and managed cloud-based hosting environments — including domain setup, SSL, and deployment automation — ensuring uptime and performance monitoring.",
