@@ -11,21 +11,21 @@ export default function DescriptionSection() {
         </h1>
       </div>
       <p className="text-gray-700 dark:text-gray-300">
-        I&apos;m a Software Engineer who turns complex requirements into
-        elegant, production-ready solutions. I specialize in full-stack
-        development with TypeScript, React, Next.js, Node.js, Flutter, and
-        Python.
+        I&apos;m a Full Stack Engineer with deep experience in TypeScript,
+        React, Next.js, Node.js, Flutter, and Python. I specialize in building
+        scalable, production-ready systems with clean architecture and strong UX
+        foundations.
       </p>
       <p className="text-gray-700 dark:text-gray-300 mt-4">
-        Beyond development, I&apos;m expanding my expertise in cloud
-        infrastructure and DevOps practices, with AWS certifications and
-        hands-on experience deploying scalable applications. I thrive in dynamic
-        environments where I can solve complex problems and contribute to
-        meaningful projects.
+        At C4DLab (University of Nairobi), I lead full-stack development and
+        infrastructure for research-driven platforms. Previously, I led frontend
+        and mobile engineering at MONOS, shipping systems used globally across
+        education and commerce.
       </p>
       <p className="text-gray-700 dark:text-gray-300 mt-4">
-        Currently based in Kenya, I&apos;m open to opportunities that challenge
-        me to grow while making a positive impact.
+        I work extensively with cloud infrastructure and DevOps practices and
+        I&apos;m continually sharpening these skills through complex deployments
+        and certification (AWS Certified Solutions Architect).
       </p>
     </section>
   );
