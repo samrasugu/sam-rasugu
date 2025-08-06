@@ -17,7 +17,19 @@ const parser = new Parser<object, CustomItem>({
 
 export async function getMediumArticles(): Promise<Article[]> {
   try {
-    const feed = await parser.parseURL(process.env.MEDIUM_FEED_URL!);
+    // Validate environment variable
+    if (!process.env.MEDIUM_FEED_URL) {
+      console.error("MEDIUM_FEED_URL environment variable is not set");
+      return [];
+    }
+
+    const feed = await parser.parseURL(process.env.MEDIUM_FEED_URL);
+
+    // Validate feed response
+    if (!feed || !feed.items || !Array.isArray(feed.items)) {
+      console.error("Invalid feed response:", feed);
+      return [];
+    }
 
     return feed.items.map((item) => ({
       title: item.title || "",
