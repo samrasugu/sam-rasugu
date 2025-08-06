@@ -49,3 +49,20 @@ export interface Resume {
   fileUrl: string;
   updatedAt: string;
 }
+
+export interface Article {
+  title: string;
+  link: string;
+  guid: string;
+  description: string;
+  pubDate: string;
+  author: string;
+  categories: string[];
+  content: string;
+  thumbnail: string | null;
+  enclosure: {
+    url?: string;
+    type?: string;
+    length?: string;
+  };
+}
