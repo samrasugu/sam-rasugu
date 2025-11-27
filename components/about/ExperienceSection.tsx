@@ -17,20 +17,38 @@ interface ExperienceItem {
 const ExperienceSection: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
+      id: 0,
+      title: "Lead Software Engineer",
+      company: "Nurture Connect",
+      companyUrl: "https://nurtureconnect.health/",
+      period: "July 2025 - Present",
+      location: "Remote (Contract)",
+      description:
+        "As a Lead Software Engineer, I drive the design and delivery of scalable, user-focused digital products from concept to deployment. I bridge the gap between hands-on development and technical leadership — mentoring engineers, defining architectural direction, and ensuring code quality across the stack. Passionate about building high-performing teams, optimizing systems, and translating business needs into elegant technical solutions.",
+      technologies: [
+        "React Native",
+        "Azure",
+        "Product Management",
+        "Flask",
+        "Android",
+        "React.js",
+        "Expo",
+      ],
+    },
+    {
       id: 1,
-      title: "Full Stack Engineer",
+      title: "Software Engineer",
       company: "C4DLab - University of Nairobi",
       companyUrl: "http://c4dlab.uonbi.ac.ke/",
-      period: "Dec 2023 - Present",
+      period: "Dec 2023 - July 2025",
       location: "Nairobi, Kenya - Full-time(Hybrid)",
       description:
         "At C4DLab, the R&D arm of the University of Nairobi’s School of Computing & Informatics, I currently lead software engineering and digital infrastructure efforts for research-focused platforms. I work closely with faculty, researchers, and partners to design, build, and scale solutions that support the lab’s innovation and digital transformation initiatives.",
       keyHighlights: [
-        "Built and maintained performant full-stack platforms supporting institutional research and incubation projects. Emphasized scalable architecture and modular, maintainable code.",
-        "Configured and managed cloud-based hosting environments — including domain setup, SSL, and deployment automation — ensuring uptime and performance monitoring.",
-        "Provided ongoing system support and technical troubleshooting, rolling out updates and preemptive optimizations.",
-        "Designed and maintained digital branding assets, pitch decks, and cross-platform content systems to support the lab’s outreach and identity.",
-        "Collaborated with faculty and institutional partners to advise on infrastructure planning, storytelling tooling, and product growth strategy.",
+        "Led end-to-end development of responsive, high-performance platforms supporting research and innovation initiatives. Focused on maintainable architecture and long-term scalability.",
+        "Configured and managed cloud hosting environments — handling deployments, domain setup, SSL, and performance monitoring.",
+        "Provided ongoing platform support and maintenance, addressing technical issues, rolling out updates, and optimizing reliability.",
+        "Guided software tooling and infrastructure decisions aligned with C4DLab’s innovation-driven mission.",
       ],
       technologies: [
         "React",
