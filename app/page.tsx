@@ -13,8 +13,8 @@ async function HomeContent() {
         Hi 👋, I&apos;m Sam Rasugu
       </p>
       <p className="text-base text-gray-700 dark:text-gray-300">
-        I&apos;m a Full Stack Engineer who transforms complex ideas into
-        elegant, production-ready solutions. I specialize in full-stack and
+        I&apos;m a Software Engineer who transforms complex ideas into elegant,
+        production-ready solutions. I specialize in full-stack and
         cross-platform development using TypeScript, React, Next.js, Node.js,
         Flutter, and Python.
       </p>
