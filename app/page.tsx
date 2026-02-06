@@ -19,19 +19,19 @@ async function HomeContent() {
         Flutter, and Python.
       </p>
       <p className="text-base text-gray-700 dark:text-gray-300">
-        For my work history, check out my{" "}
+        Check out my{" "}
+        <Link href="/projects" className="underline">
+          projects
+        </Link>{" "}
+        or{" "}
         <a
           href={resume?.fileUrl || "/docs/Sam-Rasugu-Resume.pdf"}
           className="underline"
           target="_blank"
           rel="noopener noreferrer"
         >
-          resume
+          my resume
         </a>{" "}
-        or{" "}
-        <a href="mailto:mokuasamr@gmail.com" className="underline">
-          get in touch
-        </a>
       </p>
       <Link
         className="text-base dark:text-gray-200 hover:underline mt-10 group"
