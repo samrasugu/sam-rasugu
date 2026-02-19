@@ -16,7 +16,7 @@ async function HomeContent() {
         I&apos;m a Software Engineer who transforms complex ideas into elegant,
         production-ready solutions. I specialize in full-stack and
         cross-platform development using TypeScript, React, Next.js, Node.js,
-        Flutter, and Python.
+        Flutter, React Native, and Python.
       </p>
       <p className="text-base text-gray-700 dark:text-gray-300">
         Check out my{" "}

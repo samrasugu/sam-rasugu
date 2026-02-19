@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="flex flex-col justify-between dark:bg-primary-background px-7 gap-8">
       <div className="flex flex-row gap-6">
         <a
-          href="https://www.linkedin.com/in/sam-rasugu/"
+          href="https://www.linkedin.com/in/samrasugu-m/"
           target="_blank"
           rel="noreferrer"
         >
@@ -35,7 +35,7 @@ export default function Footer() {
       </div>
 
       <p className="text-gray-800 dark:text-gray-text text-xs">
-        © 2025 Sam Rasugu
+        © {new Date().getFullYear()} Sam Rasugu
       </p>
     </footer>
   );
