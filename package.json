@@ -9,7 +9,7 @@
     "build:prod": "env APP_ENV=production next build",
     "start:test": "env APP_ENV=development next start",
     "start:prod": "env APP_ENV=production next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@sanity/image-url": "^1.1.0",
@@ -28,7 +28,6 @@
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@sanity/eslint-config-studio": "^5.0.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
