@@ -14,36 +14,52 @@ async function HomeContent() {
   const latestPost = articles[0];
 
   return (
-    <section className="bg-white dark:bg-primary-background flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5">
-      <p className="text-gray-900 dark:text-white text-5xl font-bold">
-        Hi 👋, I&apos;m Sam Rasugu
+    <section className="flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-6">
+      <p className="fig-label">Fig. 01 — Profile</p>
+      <h1 className="font-display uppercase text-fg text-6xl md:text-7xl font-semibold leading-none">
+        Sam Rasugu
+      </h1>
+      <p className="text-accent font-mono text-sm">
+        {"// Lead Software Engineer"}
       </p>
-      <p className="text-base text-gray-700 dark:text-gray-300">
-        I&apos;m a Software Engineer who transforms complex ideas into elegant,
-        production-ready solutions. I specialize in full-stack and
-        cross-platform development using TypeScript, React, Next.js, Node.js,
-        Flutter, React Native, and Python.
+      <p className="text-base text-dim max-w-2xl">
+        Full-stack and cross-platform engineer — TypeScript, React, Next.js,
+        Node.js, Flutter, React Native, and Python. Turning ambiguous
+        requirements into production-ready systems.
       </p>
-      <p className="text-base text-gray-700 dark:text-gray-300">
-        Check out my{" "}
-        <Link href="/projects" className="underline text-accent">
-          projects
+
+      <div className="flex items-center gap-2 my-2">
+        <span className="w-2.5 h-2.5 border border-fg rotate-45 bg-accent" />
+        <span className="h-px w-10 bg-grid-line" />
+        <span className="w-2.5 h-2.5 border border-fg rotate-45" />
+        <span className="h-px w-10 bg-grid-line" />
+        <span className="w-2.5 h-2.5 border border-fg rotate-45 bg-accent" />
+      </div>
+
+      <p className="text-base text-dim">
+        See the{" "}
+        <Link
+          href="/projects"
+          className="text-accent underline underline-offset-4"
+        >
+          project index
         </Link>{" "}
         or{" "}
         <a
           href={resume?.fileUrl || "/docs/Sam-Rasugu-Resume.pdf"}
-          className="underline text-accent"
+          className="text-accent underline underline-offset-4"
           target="_blank"
           rel="noopener noreferrer"
         >
-          my resume
-        </a>{" "}
+          the full spec (resume)
+        </a>
       </p>
+
       <Link
-        className="text-base dark:text-gray-200 hover:underline mt-10 group"
+        className="text-sm font-mono text-dim hover:text-fg mt-6 group"
         href="/about"
       >
-        See more about me{" "}
+        cd about{" "}
         <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
       </Link>
 
@@ -52,15 +68,13 @@ async function HomeContent() {
           href={latestPost.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 p-4 rounded-xl border border-gray-300/50 dark:border-gray-300/10 max-w-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors group"
+          className="corner-marks mt-6 p-4 border border-grid-line max-w-xl hover:border-dim transition-colors group bg-panel/50"
         >
-          <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-            Latest from the blog
-          </p>
-          <p className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-accent transition-colors">
+          <p className="fig-label mb-2">Fig. 02 — Latest dispatch</p>
+          <p className="text-lg font-display uppercase text-fg group-hover:text-accent transition-colors">
             {latestPost.title}
           </p>
-          <p className="text-sm text-gray-700 dark:text-gray-300 mt-1 line-clamp-2">
+          <p className="text-sm text-dim mt-1 line-clamp-2">
             {stripHtml(latestPost.description)}
           </p>
         </a>
@@ -72,19 +86,19 @@ async function HomeContent() {
 function LoadingSkeleton() {
   return (
     <section
-      className="bg-white dark:bg-primary-background flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5"
+      className="flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5"
       aria-label="Loading page content"
     >
       <div
-        className="h-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-3/4"
+        className="h-16 bg-panel border border-grid-line animate-pulse w-3/4"
         aria-hidden="true"
       ></div>
       <div
-        className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-full"
+        className="h-4 bg-panel border border-grid-line animate-pulse w-full"
         aria-hidden="true"
       ></div>
       <div
-        className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-2/3"
+        className="h-4 bg-panel border border-grid-line animate-pulse w-2/3"
         aria-hidden="true"
       ></div>
       <span className="sr-only">Loading content...</span>

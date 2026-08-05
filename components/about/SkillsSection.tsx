@@ -1,4 +1,3 @@
-import { PenLine } from "lucide-react";
 import React from "react";
 
 export default function SkillsSection() {
@@ -37,25 +36,24 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="my-12 bg-white dark:bg-primary-background">
-      <div className="flex flex-row gap-4 items-center mb-12">
-        <PenLine size={34} className="text-gray-900 dark:text-white" />
-        <h1 className="text-3xl font-bold text-left text-gray-800 dark:text-white">
-          Skills
-        </h1>
-      </div>
+    <section className="my-12">
+      <p className="fig-label mb-2">Fig. 05 — Stack</p>
+      <h1 className="font-display uppercase text-4xl font-semibold text-fg mb-10">
+        Skills
+      </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category, index) => (
-          <div key={index} className="text-left">
-            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-3">
-              {category.title}
-            </h3>
+          <div
+            key={index}
+            className="corner-marks border border-grid-line p-4 bg-panel/50"
+          >
+            <p className="fig-label mb-3">{category.title}</p>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill, skillIndex) => (
                 <span
                   key={skillIndex}
-                  className="bg-transparent text-gray-700 dark:text-white px-2 py-1 rounded-full text-sm border border-gray-300/50 dark:border-gray-300/20"
+                  className="text-fg text-sm font-mono px-2 py-1 border border-grid-line"
                 >
                   {skill}
                 </span>

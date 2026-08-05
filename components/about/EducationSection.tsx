@@ -1,4 +1,3 @@
-import { GraduationCap } from "lucide-react";
 import React from "react";
 
 interface EducationItem {
@@ -28,52 +27,43 @@ const EducationSection: React.FC = () => {
   ];
 
   return (
-    <section className="md:pb-12 bg-white dark:bg-primary-background">
-      <div className="flex flex-row gap-7 items-center justify-start">
-        <GraduationCap size={34} className="text-gray-900 dark:text-white" />
-        <h1 className="text-3xl font-bold text-left my-12 text-gray-800 dark:text-white">
-          Education
-        </h1>
-      </div>
+    <section className="md:pb-12">
+      <p className="fig-label mb-2">Fig. 06 — Education</p>
+      <h1 className="font-display uppercase text-4xl font-semibold text-fg mb-10">
+        Education
+      </h1>
 
-      <div className="relative container mx-auto">
-        <div className="hidden md:absolute md:flex left-6 top-0 h-full w-1 bg-gray-800 dark:bg-white"></div>
+      <div className="relative">
+        <div className="hidden md:block absolute left-3 top-0 h-full w-px bg-grid-line"></div>
 
         {education.map((edu, index) => (
-          <div key={index} className="flex flex-row items-start mb-16 relative">
-            <div className="hidden md:absolute left-6 transform -translate-x-1/2 w-10 h-10 rounded-full bg-gray-700 dark:bg-white border-3 border-white dark:border-black z-10 md:flex items-center justify-center">
-              <div className="w-7 h-7 rounded-full bg-white dark:bg-black"></div>
-            </div>
+          <div key={index} className="flex flex-row items-start mb-10 relative">
+            <div className="hidden md:flex absolute left-3 -translate-x-1/2 w-2.5 h-2.5 border border-fg bg-accent rotate-45 z-10"></div>
 
-            <div className="md:ml-16 w-full">
-              <div className="flex flex-col bg-white dark:bg-primary-background p-4 rounded-lg items-start border border-gray-500 dark:border-gray-300/10">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
-                  {edu.level} in {edu.course} @
-                  <a
-                    href={edu.schoolUrl}
-                    className="text-gray-700 dark:text-white hover:underline ml-1 font-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {edu.school}
-                  </a>
-                </h3>
-                <p className="text-gray-700 dark:text-gray-400 mb-2">
-                  {edu.period && edu.period} {edu.location}
-                </p>
-                <p className="text-gray-700 dark:text-gray-400 mb-2">
-                  <span className="font-bold text-gray-700 dark:text-white">
-                    Grade:
-                  </span>{" "}
-                  {edu.credits}
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 text-left text-base">
-                  <span className="font-bold text-gray-700 dark:text-white">
-                    Relevant coursework:
-                  </span>{" "}
-                  {edu.description}
-                </p>
-              </div>
+            <div className="md:ml-12 w-full corner-marks border border-grid-line p-4 bg-panel/50">
+              <h3 className="text-lg font-display uppercase text-fg">
+                {edu.level} in {edu.course} —{" "}
+                <a
+                  href={edu.schoolUrl}
+                  className="text-accent hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {edu.school}
+                </a>
+              </h3>
+              <p className="fig-label mt-2">
+                {edu.period && `${edu.period} · `}
+                {edu.location}
+              </p>
+              <p className="text-dim text-sm mt-2">
+                <span className="text-fg font-mono">Grade: </span>
+                {edu.credits}
+              </p>
+              <p className="text-dim text-sm mt-2">
+                <span className="text-fg font-mono">Coursework: </span>
+                {edu.description}
+              </p>
             </div>
           </div>
         ))}

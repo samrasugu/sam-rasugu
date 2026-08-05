@@ -40,25 +40,25 @@ export default async function ProjectDetailPage({
   }
 
   const iconClass =
-    "text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200";
+    "text-dim group-hover:text-fg transition-colors duration-200";
 
   return (
     <UIWrapper>
       <main className="w-full py-8 md:py-16 flex flex-col gap-6">
         <Link
           href="/projects"
-          className="flex flex-row gap-3 items-center w-fit text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+          className="flex flex-row gap-3 items-center w-fit text-dim hover:text-fg font-mono text-sm"
         >
           <MoveLeft size={20} />
-          Back to Projects
+          cd ../projects
         </Link>
 
         {project.featuredImage && (
-          <div className="relative w-full h-64 md:h-96 xl:h-[480px] rounded-xl overflow-hidden">
+          <div className="relative w-full h-64 md:h-96 xl:h-[480px] border border-grid-line overflow-hidden">
             <Image
               src={urlFor(project.featuredImage as SanityImageSource)}
               alt={project.title}
-              className="object-cover object-center"
+              className="object-cover object-center grayscale-30 contrast-110"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
               priority
@@ -66,19 +66,18 @@ export default async function ProjectDetailPage({
           </div>
         )}
 
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+        <p className="fig-label">Fig. 09 — Case study</p>
+        <h1 className="font-display uppercase text-4xl font-semibold text-fg">
           {project.title}
         </h1>
 
-        <p className="text-base text-gray-700 dark:text-gray-300">
-          {project.description}
-        </p>
+        <p className="text-base text-dim">{project.description}</p>
 
         <div className="flex flex-wrap gap-2">
           {project.technologies?.map((tech, index) => (
             <span
               key={index}
-              className="bg-transparent text-gray-700 dark:text-white px-2 py-1 rounded-full text-sm border border-gray-300/50 dark:border-gray-300/20"
+              className="text-dim px-2 py-1 text-xs font-mono border border-grid-line"
             >
               {tech}
             </span>
@@ -92,10 +91,10 @@ export default async function ProjectDetailPage({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View source code on GitHub"
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300/50 dark:border-gray-300/20 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 px-3 py-2 border border-grid-line hover:border-dim transition-colors duration-200 group"
             >
               <GrGithub className={iconClass} size={16} />
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+              <span className="text-xs font-mono text-dim group-hover:text-fg">
                 Code
               </span>
             </a>
@@ -107,10 +106,10 @@ export default async function ProjectDetailPage({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={getPlatformTitle(project.liveUrl)}
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300/50 dark:border-gray-300/20 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 px-3 py-2 border border-grid-line hover:border-dim transition-colors duration-200 group"
             >
               {getPlatformIcon(project.liveUrl, iconClass)}
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+              <span className="text-xs font-mono text-dim group-hover:text-fg">
                 {getPlatformLabel(project.liveUrl)}
               </span>
             </a>
@@ -122,10 +121,10 @@ export default async function ProjectDetailPage({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={getPlatformTitle(project.appStoreUrl)}
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300/50 dark:border-gray-300/20 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 group"
+              className="inline-flex items-center gap-2 px-3 py-2 border border-grid-line hover:border-dim transition-colors duration-200 group"
             >
               {getPlatformIcon(project.appStoreUrl, iconClass)}
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+              <span className="text-xs font-mono text-dim group-hover:text-fg">
                 {getPlatformLabel(project.appStoreUrl)}
               </span>
             </a>
@@ -133,7 +132,7 @@ export default async function ProjectDetailPage({
         </div>
 
         {Array.isArray(project.body) && project.body.length > 0 && (
-          <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 mt-4">
+          <div className="prose prose-invert max-w-none text-dim mt-4">
             <PortableText value={project.body} />
           </div>
         )}
@@ -143,12 +142,12 @@ export default async function ProjectDetailPage({
             {project.images.map((image, index) => (
               <div
                 key={index}
-                className="relative w-full h-64 rounded-xl overflow-hidden"
+                className="relative w-full h-64 border border-grid-line overflow-hidden"
               >
                 <Image
                   src={urlFor(image as SanityImageSource)}
                   alt={`${project.title} screenshot ${index + 1}`}
-                  className="object-cover object-center"
+                  className="object-cover object-center grayscale-30 contrast-110"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

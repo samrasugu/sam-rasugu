@@ -2,46 +2,72 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  --black: #171717;
-  --off-white: #ece7e1;
-  --charcoal: #1a1818;
-  --text-gray: #9ca3af;
-  --accent: #b45309;
-}
-
-.dark {
-  --accent: #fbbf24;
+  --bg: #0e2a4a;
+  --grid-line: #1f4d78;
+  --fg: #cfe3f7;
+  --dim: #6e93b8;
+  --accent: #ff7a33;
+  --panel: #0f2e50;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-inter: var(--font-inter);
-
-  --color-primary-background: var(--black);
-  --color-secondary-background: var(--off-white);
-  --color-primary-foreground: var(--off-white);
-  --color-charcoal: var(--charcoal);
-  --color-gray-text: var(--text-gray);
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-dim: var(--dim);
   --color-accent: var(--accent);
+  --color-panel: var(--panel);
+  --color-grid-line: var(--grid-line);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ededed;
-    --foreground: #ededed;
-  }
-} */
-
-@custom-variant dark (&:where(.dark, .dark *));
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+}
+
+.font-display {
+  font-family: var(--font-display), "Arial Narrow", sans-serif;
+}
+
+.corner-marks {
+  position: relative;
+}
+
+.corner-marks::before,
+.corner-marks::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--dim);
+  border-style: solid;
+}
+
+.corner-marks::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+
+.corner-marks::after {
+  top: -1px;
+  right: -1px;
+  border-width: 1px 1px 0 0;
+}
+
+.fig-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
 }
 
 @keyframes fadeIn {
@@ -59,6 +85,13 @@ body {
 .animate-fadeIn {
   animation: fadeIn 0.6s ease-out forwards;
   opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeIn {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .sr-only {

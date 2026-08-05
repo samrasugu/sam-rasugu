@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Big_Shoulders, Space_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
 import React from "react";
 
-const inter = Inter({
-  variable: "--font-inter",
+const bigShoulders = Big_Shoulders({
+  variable: "--font-display",
   display: "swap",
+  weight: ["600", "700", "800"],
+  subsets: ["latin"],
+});
+
+const spaceMono = Space_Mono({
+  variable: "--font-mono",
+  display: "swap",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -35,26 +42,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                 (function() {
-                   try {
-                     var theme = localStorage.getItem('theme');
-                     if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                       document.documentElement.classList.add('dark');
-                     } else {
-                       document.documentElement.classList.remove('dark');
-                     }
-                   } catch (e) {}
-                 })();
-               `,
-          }}
-        />
-      </head>
-      <body className={`${inter.variable}  antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body
+        className={`${bigShoulders.variable} ${spaceMono.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
   );
