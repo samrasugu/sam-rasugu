@@ -107,7 +107,7 @@ export default function ProjectCard({
                 .image(project.featuredImage as SanityImageSource)
                 .url()}
               alt={`Project ${index + 1}`}
-              className="rounded-md object-fit object-center w-full"
+              className="rounded-md object-cover object-center w-full"
               fill={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
