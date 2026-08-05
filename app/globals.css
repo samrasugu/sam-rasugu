@@ -2,46 +2,40 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  --black: #171717;
-  --off-white: #ece7e1;
-  --charcoal: #1a1818;
-  --text-gray: #9ca3af;
-  --accent: #b45309;
-}
-
-.dark {
-  --accent: #fbbf24;
+  --bg: #e7e2d8;
+  --ink: #2b271f;
+  --sub: #6b6355;
+  --accent: #2f4a3c;
+  --line: rgba(43, 39, 31, 0.18);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-inter: var(--font-inter);
-
-  --color-primary-background: var(--black);
-  --color-secondary-background: var(--off-white);
-  --color-primary-foreground: var(--off-white);
-  --color-charcoal: var(--charcoal);
-  --color-gray-text: var(--text-gray);
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-sub: var(--sub);
   --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ededed;
-    --foreground: #ededed;
-  }
-} */
-
-@custom-variant dark (&:where(.dark, .dark *));
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), Georgia, ui-serif, serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, ui-serif, serif;
+}
+
+.eyebrow {
+  font-family: var(--font-body), Georgia, ui-serif, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-style: normal;
 }
 
 @keyframes fadeIn {
@@ -59,6 +53,13 @@ body {
 .animate-fadeIn {
   animation: fadeIn 0.6s ease-out forwards;
   opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeIn {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .sr-only {

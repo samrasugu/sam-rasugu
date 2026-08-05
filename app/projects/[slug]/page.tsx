@@ -40,25 +40,25 @@ export default async function ProjectDetailPage({
   }
 
   const iconClass =
-    "text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200";
+    "text-sub group-hover:text-ink transition-colors duration-200";
 
   return (
     <UIWrapper>
-      <main className="w-full py-8 md:py-16 flex flex-col gap-6">
+      <main className="w-full max-w-3xl py-8 md:py-16 flex flex-col gap-6">
         <Link
           href="/projects"
-          className="flex flex-row gap-3 items-center w-fit text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+          className="flex flex-row gap-3 items-center w-fit text-sub hover:text-ink italic"
         >
           <MoveLeft size={20} />
           Back to Projects
         </Link>
 
         {project.featuredImage && (
-          <div className="relative w-full h-64 md:h-96 xl:h-[480px] rounded-xl overflow-hidden">
+          <div className="relative w-full h-64 md:h-96 xl:h-[480px] border border-line overflow-hidden">
             <Image
               src={urlFor(project.featuredImage as SanityImageSource)}
               alt={project.title}
-              className="object-cover object-center"
+              className="object-cover object-center grayscale-30 sepia-15"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
               priority
@@ -66,36 +66,28 @@ export default async function ProjectDetailPage({
           </div>
         )}
 
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          {project.title}
-        </h1>
+        <p className="eyebrow">Case study</p>
+        <h1 className="font-display text-4xl text-ink">{project.title}</h1>
 
-        <p className="text-base text-gray-700 dark:text-gray-300">
+        <p className="text-lg text-sub leading-relaxed">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
-          {project.technologies?.map((tech, index) => (
-            <span
-              key={index}
-              className="bg-transparent text-gray-700 dark:text-white px-2 py-1 rounded-full text-sm border border-gray-300/50 dark:border-gray-300/20"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
+        <p className="text-sub italic text-sm">
+          {project.technologies?.join(", ")}
+        </p>
 
-        <div className="flex flex-row flex-wrap gap-3 items-center">
+        <div className="flex flex-row flex-wrap gap-5 items-center border-t border-b border-line py-4">
           {project.github && (
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View source code on GitHub"
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300/50 dark:border-gray-300/20 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 group"
+              className="inline-flex items-center gap-1.5 group"
             >
-              <GrGithub className={iconClass} size={16} />
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+              <GrGithub className={iconClass} size={14} />
+              <span className="text-sm italic text-sub group-hover:text-ink">
                 Code
               </span>
             </a>
@@ -107,10 +99,10 @@ export default async function ProjectDetailPage({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={getPlatformTitle(project.liveUrl)}
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300/50 dark:border-gray-300/20 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 group"
+              className="inline-flex items-center gap-1.5 group"
             >
               {getPlatformIcon(project.liveUrl, iconClass)}
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+              <span className="text-sm italic text-sub group-hover:text-ink">
                 {getPlatformLabel(project.liveUrl)}
               </span>
             </a>
@@ -122,10 +114,10 @@ export default async function ProjectDetailPage({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={getPlatformTitle(project.appStoreUrl)}
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300/50 dark:border-gray-300/20 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 group"
+              className="inline-flex items-center gap-1.5 group"
             >
               {getPlatformIcon(project.appStoreUrl, iconClass)}
-              <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+              <span className="text-sm italic text-sub group-hover:text-ink">
                 {getPlatformLabel(project.appStoreUrl)}
               </span>
             </a>
@@ -133,7 +125,7 @@ export default async function ProjectDetailPage({
         </div>
 
         {Array.isArray(project.body) && project.body.length > 0 && (
-          <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 mt-4">
+          <div className="prose max-w-none text-sub mt-4">
             <PortableText value={project.body} />
           </div>
         )}
@@ -143,12 +135,12 @@ export default async function ProjectDetailPage({
             {project.images.map((image, index) => (
               <div
                 key={index}
-                className="relative w-full h-64 rounded-xl overflow-hidden"
+                className="relative w-full h-64 border border-line overflow-hidden"
               >
                 <Image
                   src={urlFor(image as SanityImageSource)}
                   alt={`${project.title} screenshot ${index + 1}`}
-                  className="object-cover object-center"
+                  className="object-cover object-center grayscale-30 sepia-15"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

@@ -14,33 +14,36 @@ async function HomeContent() {
   const latestPost = articles[0];
 
   return (
-    <section className="bg-white dark:bg-primary-background flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5">
-      <p className="text-gray-900 dark:text-white text-5xl font-bold">
-        Hi 👋, I&apos;m Sam Rasugu
+    <section className="flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-6 max-w-2xl">
+      <p className="eyebrow">Software engineer — Nairobi / remote</p>
+      <h1 className="font-display text-6xl md:text-7xl text-ink leading-none">
+        Sam Rasugu
+      </h1>
+      <p className="font-display italic text-xl text-accent">
+        Software, built deliberately.
       </p>
-      <p className="text-base text-gray-700 dark:text-gray-300">
+      <p className="text-lg text-sub leading-relaxed">
         I&apos;m a Software Engineer who transforms complex ideas into elegant,
-        production-ready solutions. I specialize in full-stack and
-        cross-platform development using TypeScript, React, Next.js, Node.js,
-        Flutter, React Native, and Python.
+        production-ready solutions — full-stack and cross-platform work in
+        TypeScript, React, Next.js, Node.js, Flutter, React Native, and Python.
       </p>
-      <p className="text-base text-gray-700 dark:text-gray-300">
-        Check out my{" "}
-        <Link href="/projects" className="underline text-accent">
-          projects
+      <p className="text-lg text-sub leading-relaxed">
+        Read the{" "}
+        <Link href="/projects" className="text-accent underline italic">
+          project index
         </Link>{" "}
         or{" "}
         <a
           href={resume?.fileUrl || "/docs/Sam-Rasugu-Resume.pdf"}
-          className="underline text-accent"
+          className="text-accent underline italic"
           target="_blank"
           rel="noopener noreferrer"
         >
-          my resume
-        </a>{" "}
+          the résumé
+        </a>
       </p>
       <Link
-        className="text-base dark:text-gray-200 hover:underline mt-10 group"
+        className="text-base text-sub italic hover:text-ink mt-8 group border-t border-line pt-4 w-full"
         href="/about"
       >
         See more about me{" "}
@@ -52,15 +55,13 @@ async function HomeContent() {
           href={latestPost.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 p-4 rounded-xl border border-gray-300/50 dark:border-gray-300/10 max-w-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors group"
+          className="mt-2 pt-4 border-t border-line w-full group"
         >
-          <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-            Latest from the blog
-          </p>
-          <p className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-accent transition-colors">
+          <p className="eyebrow mb-1">Latest from the blog</p>
+          <p className="font-display text-xl text-ink group-hover:text-accent transition-colors">
             {latestPost.title}
           </p>
-          <p className="text-sm text-gray-700 dark:text-gray-300 mt-1 line-clamp-2">
+          <p className="text-base text-sub mt-1 line-clamp-2">
             {stripHtml(latestPost.description)}
           </p>
         </a>
@@ -72,19 +73,19 @@ async function HomeContent() {
 function LoadingSkeleton() {
   return (
     <section
-      className="bg-white dark:bg-primary-background flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5"
+      className="flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5 max-w-2xl"
       aria-label="Loading page content"
     >
       <div
-        className="h-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-3/4"
+        className="h-16 bg-ink/10 animate-pulse w-3/4"
         aria-hidden="true"
       ></div>
       <div
-        className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-full"
+        className="h-4 bg-ink/10 animate-pulse w-full"
         aria-hidden="true"
       ></div>
       <div
-        className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-2/3"
+        className="h-4 bg-ink/10 animate-pulse w-2/3"
         aria-hidden="true"
       ></div>
       <span className="sr-only">Loading content...</span>

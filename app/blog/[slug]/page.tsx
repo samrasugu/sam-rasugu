@@ -34,37 +34,33 @@ export default async function BlogDetailsPage({
 
   return (
     <UIWrapper>
-      {" "}
-      <main className="container mx-auto min-h-screen p-8 flex flex-col gap-4">
-        <Link href="/blog" className="flex flex-row gap-4 items-center">
-          <MoveLeft
-            className="text-gray-700 font-bold dark:text-white"
-            size={30}
-          />
-          <h1 className="text-3xl font-bold text-left my-10 text-gray-700 dark:text-white">
-            Back to Blog
-          </h1>
+      <main className="w-full max-w-3xl min-h-screen p-8 flex flex-col gap-4">
+        <Link
+          href="/blog"
+          className="flex flex-row gap-3 items-center w-fit text-sub hover:text-ink italic"
+        >
+          <MoveLeft size={20} />
+          Back to Blog
         </Link>
         {postImageUrl && (
-          <div className="relative w-full h-80 md:h-96 xl:h-[500px] rounded-xl">
+          <div className="relative w-full h-80 md:h-96 xl:h-[500px] border border-line overflow-hidden">
             <Image
               src={postImageUrl}
               alt={post.title}
-              className="aspect-video rounded-xl"
+              className="aspect-video grayscale-30 sepia-15"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         )}
         <div className="flex flex-col gap-4 mt-8">
-          <h1 className="text-3xl font-bold text-black dark:text-gray-300">
-            {post.title}
-          </h1>
-          <p className="text-black dark:text-gray-400">
+          <p className="eyebrow">Dispatch</p>
+          <h1 className="font-display text-4xl text-ink">{post.title}</h1>
+          <p className="text-sub italic text-sm">
             {new Date(post.publishedAt).toLocaleDateString()}
           </p>
 
-          <div className="prose text-gray-700 dark:text-gray-300 mt-8">
+          <div className="prose max-w-none text-sub mt-8">
             {Array.isArray(post.body) && <PortableText value={post.body} />}
           </div>
         </div>
