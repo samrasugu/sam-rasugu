@@ -89,7 +89,7 @@ export default function NavBar({ children }: NavBarProps) {
               onClick={closeSidebar}
               className={`flex items-center space-x-3 p-3 rounded-xl transition-colors ${
                 pathname === item.href
-                  ? "dark:text-white text-gray-900 font-semibold"
+                  ? "text-accent font-semibold"
                   : "text-gray-500 hover:text-gray-900 dark:hover:text-white"
               }`}
               aria-current={pathname === item.href ? "page" : undefined}
