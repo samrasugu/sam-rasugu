@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #ffffff;
@@ -8,6 +9,11 @@
   --off-white: #ece7e1;
   --charcoal: #1a1818;
   --text-gray: #9ca3af;
+  --accent: #b45309;
+}
+
+.dark {
+  --accent: #fbbf24;
 }
 
 @theme inline {
@@ -20,6 +26,7 @@
   --color-primary-foreground: var(--off-white);
   --color-charcoal: var(--charcoal);
   --color-gray-text: var(--text-gray);
+  --color-accent: var(--accent);
 }
 
 /* @media (prefers-color-scheme: dark) {

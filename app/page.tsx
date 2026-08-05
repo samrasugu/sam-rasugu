@@ -2,10 +2,16 @@ import Link from "next/link";
 import UIWrapper from "./UIWrapper";
 import { ArrowUpRight } from "lucide-react";
 import { getResume } from "@/lib/resume";
+import { getMediumArticles } from "@/lib/medium";
+import { stripHtml } from "@/lib/utils";
 import { Suspense } from "react";
 
 async function HomeContent() {
-  const resume = await getResume();
+  const [resume, articles] = await Promise.all([
+    getResume(),
+    getMediumArticles(),
+  ]);
+  const latestPost = articles[0];
 
   return (
     <section className="bg-white dark:bg-primary-background flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5">
@@ -20,13 +26,13 @@ async function HomeContent() {
       </p>
       <p className="text-base text-gray-700 dark:text-gray-300">
         Check out my{" "}
-        <Link href="/projects" className="underline">
+        <Link href="/projects" className="underline text-accent">
           projects
         </Link>{" "}
         or{" "}
         <a
           href={resume?.fileUrl || "/docs/Sam-Rasugu-Resume.pdf"}
-          className="underline"
+          className="underline text-accent"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -40,6 +46,25 @@ async function HomeContent() {
         See more about me{" "}
         <ArrowUpRight className="inline group-hover:scale-125 transition-transform duration-200" />
       </Link>
+
+      {latestPost && (
+        <a
+          href={latestPost.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 p-4 rounded-xl border border-gray-300/50 dark:border-gray-300/10 max-w-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors group"
+        >
+          <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+            Latest from the blog
+          </p>
+          <p className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-accent transition-colors">
+            {latestPost.title}
+          </p>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mt-1 line-clamp-2">
+            {stripHtml(latestPost.description)}
+          </p>
+        </a>
+      )}
     </section>
   );
 }
