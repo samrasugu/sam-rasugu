@@ -94,7 +94,7 @@ export default function ProjectCard({
               className="inline-flex items-center gap-1.5 group"
             >
               <GrGithub className={iconClass} size={14} />
-              <span className="text-xs italic text-sub group-hover:text-ink">
+              <span className="text-xs italic leading-none text-sub group-hover:text-ink">
                 Code
               </span>
             </a>
@@ -109,7 +109,7 @@ export default function ProjectCard({
               className="inline-flex items-center gap-1.5 group"
             >
               {getPlatformIcon(project.liveUrl, iconClass)}
-              <span className="text-xs italic text-sub group-hover:text-ink">
+              <span className="text-xs italic leading-none text-sub group-hover:text-ink">
                 {getPlatformLabel(project.liveUrl)}
               </span>
             </a>
@@ -124,7 +124,7 @@ export default function ProjectCard({
               className="inline-flex items-center gap-1.5 group"
             >
               {getPlatformIcon(project.appStoreUrl, iconClass)}
-              <span className="text-xs italic text-sub group-hover:text-ink">
+              <span className="text-xs italic leading-none text-sub group-hover:text-ink">
                 {getPlatformLabel(project.appStoreUrl)}
               </span>
             </a>
