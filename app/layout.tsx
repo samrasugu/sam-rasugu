@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fraunces, Newsreader } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
 import React from "react";
 
-const inter = Inter({
-  variable: "--font-inter",
+const fraunces = Fraunces({
+  variable: "--font-display",
   display: "swap",
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
+
+const newsreader = Newsreader({
+  variable: "--font-body",
+  display: "swap",
+  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
@@ -35,26 +43,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                 (function() {
-                   try {
-                     var theme = localStorage.getItem('theme');
-                     if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                       document.documentElement.classList.add('dark');
-                     } else {
-                       document.documentElement.classList.remove('dark');
-                     }
-                   } catch (e) {}
-                 })();
-               `,
-          }}
-        />
-      </head>
-      <body className={`${inter.variable}  antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body
+        className={`${fraunces.variable} ${newsreader.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

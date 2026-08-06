@@ -1,66 +1,47 @@
-import { PenLine } from "lucide-react";
 import React from "react";
 
 export default function SkillsSection() {
   const skillCategories = [
     {
       title: "Languages",
-      skills: ["TypeScript", "JavaScript", "Python"],
+      skills: ["TypeScript", "JavaScript", "Python", "Dart"],
     },
     {
-      title: "Frontend",
-      skills: [
-        "React",
-        "Next.js",
-        "Flutter",
-        "React Native",
-        "Jest",
-        "Tailwind CSS",
-      ],
+      title: "AI & Machine Learning",
+      skills: ["LangChain", "OpenAI API", "Vector Databases", "RAG"],
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Express.js", "Flask", "REST APIs", "Pytest"],
+      title: "Frameworks & Libraries",
+      skills: ["React.js", "Next.js", "Flutter", "Node.js", "Tailwind CSS"],
     },
     {
       title: "Databases",
-      skills: ["PostgreSQL", "MySQL", "MongoDB"],
+      skills: ["PostgreSQL", "MongoDB", "Firebase"],
     },
     {
       title: "Cloud & DevOps",
-      skills: ["AWS", "Firebase", "Docker"],
+      skills: ["Git", "Docker", "AWS (Certified)", "Azure", "GCP"],
     },
     {
-      title: "Tools",
-      skills: ["Git", "Flutter Test", "Figma"],
+      title: "Tools & Testing",
+      skills: ["Jest", "Figma", "Canva"],
     },
   ];
 
   return (
-    <section className="my-12 bg-white dark:bg-primary-background">
-      <div className="flex flex-row gap-4 items-center mb-12">
-        <PenLine size={34} className="text-gray-900 dark:text-white" />
-        <h1 className="text-3xl font-bold text-left text-gray-800 dark:text-white">
-          Skills
-        </h1>
-      </div>
+    <section className="my-12 pt-8 border-t border-line">
+      <p className="eyebrow mb-2">No. 03</p>
+      <h1 className="font-display text-4xl text-ink mb-8">Technical Skills</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
         {skillCategories.map((category, index) => (
           <div key={index} className="text-left">
-            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-3">
+            <p className="font-display italic text-lg text-accent mb-2">
               {category.title}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {category.skills.map((skill, skillIndex) => (
-                <span
-                  key={skillIndex}
-                  className="bg-transparent text-gray-700 dark:text-white px-2 py-1 rounded-full text-sm border border-gray-300/50 dark:border-gray-300/20"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+            </p>
+            <p className="text-sub leading-relaxed">
+              {category.skills.join(", ")}
+            </p>
           </div>
         ))}
       </div>
