@@ -169,7 +169,7 @@ const ExperienceSection: React.FC = () => {
             <p className="eyebrow pt-1">
               {String(exp.id + 1).padStart(2, "0")}
             </p>
-            <div>
+            <div className="min-w-0">
               <div className="flex items-baseline justify-between flex-wrap gap-2">
                 <h3 className="font-display text-xl text-ink">
                   {exp.title}{" "}
@@ -183,7 +183,7 @@ const ExperienceSection: React.FC = () => {
                     — {exp.company}
                   </a>
                 </h3>
-                <p className="text-sub text-sm italic whitespace-nowrap">
+                <p className="text-sub text-sm italic">
                   {exp.period} · {exp.location}
                 </p>
               </div>

@@ -16,7 +16,7 @@ async function HomeContent() {
   const latestPost = articles[0];
 
   return (
-    <section className="flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-6 max-w-2xl">
+    <section className="flex flex-col justify-center items-start gap-6 max-w-2xl min-h-[calc(100vh-5rem)] md:min-h-screen">
       <p className="eyebrow">Software engineer — Nairobi / remote</p>
       <h1 className="font-display text-6xl md:text-7xl text-ink leading-none">
         Sam Rasugu
@@ -91,7 +91,7 @@ async function HomeContent() {
 function LoadingSkeleton() {
   return (
     <section
-      className="flex flex-col justify-center translate-y-1/2 md:translate-y-0 md:min-h-screen items-start gap-5 max-w-2xl"
+      className="flex flex-col justify-center items-start gap-5 max-w-2xl min-h-[calc(100vh-5rem)] md:min-h-screen"
       aria-label="Loading page content"
     >
       <div
