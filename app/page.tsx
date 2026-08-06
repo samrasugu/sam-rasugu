@@ -4,7 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 import { getResume } from "@/lib/resume";
 import { getMediumArticles } from "@/lib/medium";
 import { stripHtml } from "@/lib/utils";
-import { Suspense } from "react";
+import { Fragment, Suspense } from "react";
+
+const stack = ["Frontend", "Backend", "Mobile", "Cloud"];
 
 async function HomeContent() {
   const [resume, articles] = await Promise.all([
@@ -22,10 +24,26 @@ async function HomeContent() {
       <p className="font-display italic text-xl text-accent">
         Software, built deliberately.
       </p>
+
+      <div className="flex items-center gap-3 w-full max-w-md">
+        {stack.map((label, i) => (
+          <Fragment key={label}>
+            <div className="flex flex-col items-center gap-1.5 shrink-0">
+              <span className="w-2 h-2 rotate-45 bg-accent/25 border border-accent" />
+              <span className="eyebrow whitespace-nowrap">{label}</span>
+            </div>
+            {i < stack.length - 1 && (
+              <span className="h-px flex-1 bg-line" aria-hidden="true" />
+            )}
+          </Fragment>
+        ))}
+      </div>
+
       <p className="text-lg text-sub leading-relaxed">
         I&apos;m a Software Engineer who transforms complex ideas into elegant,
-        production-ready solutions — full-stack and cross-platform work in
-        TypeScript, React, Next.js, Node.js, Flutter, React Native, and Python.
+        production-ready solutions — full-stack and cross-platform, end to end,
+        in TypeScript, React, Next.js, Node.js, Flutter, React Native, and
+        Python.
       </p>
       <p className="text-lg text-sub leading-relaxed">
         Read the{" "}
