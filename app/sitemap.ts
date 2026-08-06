@@ -1,7 +1,15 @@
 import { MetadataRoute } from "next";
+import { client } from "./sanity/client";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+const PROJECT_SLUGS_QUERY = `*[_type == "project" && defined(slug.current)]{ "slug": slug.current, publishedAt }`;
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://samrasugu.com";
+
+  const projects =
+    await client.fetch<{ slug: string; publishedAt: string }[]>(
+      PROJECT_SLUGS_QUERY,
+    );
 
   return [
     {
@@ -22,5 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...projects.map((project) => ({
+      url: `${baseUrl}/projects/${project.slug}`,
+      lastModified: new Date(project.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
