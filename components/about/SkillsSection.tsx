@@ -7,6 +7,10 @@ export default function SkillsSection() {
       skills: ["TypeScript", "JavaScript", "Python", "Dart"],
     },
     {
+      title: "AI & Machine Learning",
+      skills: ["LangChain", "OpenAI API", "Vector Databases", "RAG"],
+    },
+    {
       title: "Frameworks & Libraries",
       skills: ["React.js", "Next.js", "Flutter", "Node.js", "Tailwind CSS"],
     },
@@ -15,8 +19,12 @@ export default function SkillsSection() {
       skills: ["PostgreSQL", "MongoDB", "Firebase"],
     },
     {
-      title: "DevOps, Tools & Testing",
-      skills: ["Git", "Docker", "AWS", "Jest", "Figma"],
+      title: "Cloud & DevOps",
+      skills: ["Git", "Docker", "AWS (Certified)", "Azure", "GCP"],
+    },
+    {
+      title: "Tools & Testing",
+      skills: ["Jest", "Figma", "Canva"],
     },
   ];
 
@@ -25,7 +33,7 @@ export default function SkillsSection() {
       <p className="eyebrow mb-2">No. 03</p>
       <h1 className="font-display text-4xl text-ink mb-8">Technical Skills</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
         {skillCategories.map((category, index) => (
           <div key={index} className="text-left">
             <p className="font-display italic text-lg text-accent mb-2">
