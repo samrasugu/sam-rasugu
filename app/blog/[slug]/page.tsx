@@ -43,7 +43,7 @@ export default async function BlogDetailsPage({
           Back to Blog
         </Link>
         {postImageUrl && (
-          <div className="relative w-full h-80 md:h-96 xl:h-[500px] border border-line overflow-hidden">
+          <div className="relative w-full h-80 md:h-96 xl:h-125 border border-line overflow-hidden">
             <Image
               src={postImageUrl}
               alt={post.title}

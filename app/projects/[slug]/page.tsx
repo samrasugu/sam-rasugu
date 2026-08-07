@@ -54,7 +54,7 @@ export default async function ProjectDetailPage({
         </Link>
 
         {project.featuredImage && (
-          <div className="relative w-full h-64 md:h-96 xl:h-[480px] border border-line overflow-hidden">
+          <div className="relative w-full h-64 md:h-96 xl:h-120 border border-line overflow-hidden">
             <Image
               src={urlFor(project.featuredImage as SanityImageSource)}
               alt={project.title}

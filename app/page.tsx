@@ -41,9 +41,9 @@ async function HomeContent() {
 
       <p className="text-lg text-sub leading-relaxed">
         I&apos;m a Software Engineer who transforms complex ideas into elegant,
-        production-ready solutions — full-stack and cross-platform, end to end,
-        in TypeScript, React, Next.js, Node.js, Flutter, React Native, and
-        Python.
+        production-ready solutions, working full-stack and cross-platform, end
+        to end, in TypeScript, React, Next.js, Node.js, Flutter, React Native,
+        and Python.
       </p>
       <p className="text-lg text-sub leading-relaxed">
         Read the{" "}
