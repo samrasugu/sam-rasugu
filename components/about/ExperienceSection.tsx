@@ -23,7 +23,7 @@ const ExperienceSection: React.FC = () => {
       period: "July 2025 - Present",
       location: "Remote (Contract)",
       description:
-        "As a Lead Software Engineer, I drive the design and delivery of scalable, user-focused digital products from concept to deployment. I bridge the gap between hands-on development and technical leadership — mentoring engineers, defining architectural direction, and ensuring code quality across the stack. Passionate about building high-performing teams, optimizing systems, and translating business needs into elegant technical solutions.",
+        "As a Lead Software Engineer, I drive the design and delivery of scalable, user-focused digital products from concept to deployment. I bridge the gap between hands-on development and technical leadership, mentoring engineers, defining architectural direction, and ensuring code quality across the stack. Passionate about building high-performing teams, optimizing systems, and translating business needs into elegant technical solutions.",
       technologies: [
         "React Native",
         "Azure",
@@ -45,7 +45,7 @@ const ExperienceSection: React.FC = () => {
         "At C4DLab, the R&D arm of the University of Nairobi’s School of Computing & Informatics, I currently lead software engineering and digital infrastructure efforts for research-focused platforms. I work closely with faculty, researchers, and partners to design, build, and scale solutions that support the lab’s innovation and digital transformation initiatives.",
       keyHighlights: [
         "Led end-to-end development of responsive, high-performance platforms supporting research and innovation initiatives. Focused on maintainable architecture and long-term scalability.",
-        "Configured and managed cloud hosting environments — handling deployments, domain setup, SSL, and performance monitoring.",
+        "Configured and managed cloud hosting environments, handling deployments, domain setup, SSL, and performance monitoring.",
         "Provided ongoing platform support and maintenance, addressing technical issues, rolling out updates, and optimizing reliability.",
         "Guided software tooling and infrastructure decisions aligned with C4DLab’s innovation-driven mission.",
       ],
@@ -70,7 +70,7 @@ const ExperienceSection: React.FC = () => {
       period: "April 2024 - July 2025",
       location: "Manchester, UK - Part-time(Remote)",
       description:
-        "At MONOS, I worked on a suite of mission-driven digital platforms spanning education, humanitarian aid, and commerce — often from the ground up. I contributed to both frontend architecture and full product development, collaborating remotely across teams.",
+        "At MONOS, I worked on a suite of mission-driven digital platforms spanning education, humanitarian aid, and commerce, often built from the ground up. I contributed to both frontend architecture and full product development, collaborating remotely across teams.",
       keyHighlights: [
         "MONOS App (Islamic Learning Platform): Built guided Quran learning flows, user progress tracking, and content delivery modules. Contributed to sustained growth of 5,000+ monthly premium users.",
         "EHEA ECO (Sustainability Hub): Developed core React components with accessibility and performance in mind. Integrated a headless CMS (Sanity.io) for dynamic content and used Framer Motion + Tailwind CSS for visual polish.",

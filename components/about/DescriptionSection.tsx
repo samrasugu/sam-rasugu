@@ -12,13 +12,13 @@ export default function DescriptionSection() {
         I&apos;m a Software Engineer and currently the Lead Software Engineer at
         Nurture Connect. I work across frontend, mobile, and backend stacks with
         strong expertise in TypeScript, React, Next.js, React Native, Node.js,
-        Flutter, and Python — building scalable, production-ready systems with
+        Flutter, and Python. I build scalable, production-ready systems with
         clean architecture and strong UX foundations.
       </p>
       <p className="text-sub leading-relaxed mt-4">
         At Nurture Connect, I drive the design and delivery of user-focused
         digital products from concept to deployment. I bridge hands-on
-        development and technical leadership — mentoring engineers, defining
+        development and technical leadership, mentoring engineers, defining
         architectural direction, and ensuring code quality across the stack.
       </p>
       <p className="text-sub leading-relaxed mt-4">

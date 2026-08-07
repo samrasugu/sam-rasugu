@@ -80,7 +80,7 @@ export default function NavBar({ children }: NavBarProps) {
           </Link>
         </div>
 
-        <nav className="p-4 space-y-1 flex-grow" role="navigation">
+        <nav className="p-4 space-y-1 grow" role="navigation">
           {navItems.map((item) => (
             <Link
               key={item.id}
