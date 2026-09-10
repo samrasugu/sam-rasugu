@@ -17,25 +17,6 @@ const ExperienceSection: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 0,
-      title: "Lead Software Engineer",
-      company: "Nurture Connect",
-      companyUrl: "https://nurtureconnect.health/",
-      period: "Jul 2025 - Present",
-      location: "Remote (Contract)",
-      description:
-        "Drive the design and delivery of scalable, user-focused digital products from concept to deployment. Bridge hands-on development and technical leadership by mentoring engineers, defining architectural direction, and ensuring code quality across the stack.",
-      technologies: [
-        "React Native",
-        "Azure",
-        "Product Management",
-        "Flask",
-        "Android",
-        "React.js",
-        "Expo",
-      ],
-    },
-    {
-      id: 1,
       title: "Senior Software Engineer",
       company: "C4DLab — University of Nairobi",
       companyUrl: "http://c4dlab.uonbi.ac.ke/",
@@ -56,6 +37,25 @@ const ExperienceSection: React.FC = () => {
         "Python",
         "AWS",
         "Docker",
+      ],
+    },
+    {
+      id: 1,
+      title: "Lead Software Engineer",
+      company: "Nurture Connect",
+      companyUrl: "https://nurtureconnect.health/",
+      period: "Jul 2025 - Jul 2026",
+      location: "Remote (Contract)",
+      description:
+        "Drive the design and delivery of scalable, user-focused digital products from concept to deployment. Bridge hands-on development and technical leadership by mentoring engineers, defining architectural direction, and ensuring code quality across the stack.",
+      technologies: [
+        "React Native",
+        "Azure",
+        "Product Management",
+        "Flask",
+        "Android",
+        "React.js",
+        "Expo",
       ],
     },
     {
